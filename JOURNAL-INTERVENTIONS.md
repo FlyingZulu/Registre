@@ -401,3 +401,13 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Build #376 / run `44994960851` : succès, artefact debug `zulu-apk-376` (6 319 448 octets). Builds #377, #378 et #379 encore en cours au dernier contrôle ; #379 valide le head contenant le contrat asynchrone.
 - Handoff Android mis à jour au commit `14b9da61490c8f20cfdedf03039e4f4235ab218a`.
 - Aucun essai physique USB/FM-1. Aucun firmware ou patch embarqué modifié.
+
+
+## 2026-11-22 — Préservation des notifications ZTF en direct
+
+- `ZtfTransport.request()` mettait de côté les notifications PQ_CHANGED pendant les requêtes companion, mais `zrequest()` ignorait les trames companion pendant les commandes ZTF brutes. Les opérations PING/LOAD/paramètres pouvaient donc perdre des changements en direct.
+- Correction : `zrequest()` parse les trames companion reçues pendant l'attente et les remet dans la file des notifications, tout en continuant à filtrer la réponse ZTF par commande.
+- Commit : `5331cb00924fb14820fe9cd6af08f38002a83cf9`.
+- Build #376 / run `44994960851` : succès, artefact `zulu-apk-376` (6 319 448 octets). Build #377 / run `44995039610` : succès, artefact `zulu-apk-377` (6 319 507 octets). Builds #378 / #379 / #380 étaient encore en cours au dernier contrôle. Build #381 / run `44995223691` compile la correction de notifications.
+- Handoff FZuluTek mis à jour au commit `a7fbee7648c967d3737c0372933c942676a004fe`.
+- Aucun essai matériel USB/FM-1 effectué ; firmware et patches inchangés.
