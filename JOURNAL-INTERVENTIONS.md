@@ -335,3 +335,13 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - L'étape Release APK dédiée est ignorée (branche non-main) : artefact de build/debug CI, pas une release signée revendiquée.
 - Build #364 / run `44992522444` en cours sur le commit documentaire `b2a83024807d204ae44f7f46e145837b64ad7c47`, lancé par push du handoff mis à jour. Son résultat reste à vérifier.
 - Aucun test sur appareil Android physique ; rendu réel, latence audio, tactile et symptômes LCD blanc/clavier restent ouverts. PR #46 ouverte, non fusionnée, empilée sur PR #45. Firmware FM-1 inchangé.
+
+
+## 2026-11-22 — Diagnostic LCD/audio et correction RGB565
+
+- Build #365 / run `44992852556` : **succès**, commit `beb3be0767772b4b14bd56ca79b1a0e265e9c6d4`; artefact `zulu-apk-365`, 6 317 817 octets. Ajout de logs Oboe one-shot : premier callback (rate/canaux/format/device/burst), première contention du verrou, niveau de crête après déclenchement de note.
+- Build #366 / run `44992855477` : **succès**, commit `9a1c46afc245d448669d60a7d1d24e7240ad3b7f`; artefact `zulu-apk-366`, 6 318 429 octets. Ajout du diagnostic du premier blit LCD : taille view/canvas, clip, échelle, offset et pixels non noirs.
+- Revue de la conversion RGB565 : le masque rouge antérieur conservait 8 bits au lieu de 5. Correction dans LcdView, commit `7753fa2e9892f48f0971c9ec038e6542527fe54d`, alpha conservé et canaux quantifiés 5/6/5.
+- Optimisation du diagnostic audio : le calcul de crête est maintenant déclenché une seule fois après une note, et non à chaque callback silencieux ; commit `cb384588d184118e899c62f2f6dce71a9152c927`.
+- Builds #367 / run `44992903393` (RGB565) et #368 / run `44992946473` (head diagnostic audio optimisé) encore en cours au moment de la note.
+- PR #46 ouverte/non fusionnée ; aucun firmware FM-1 modifié. Aucun essai matériel Android réalisé : ces logs attendent une capture Logcat sur appareil pour conclure sur les symptômes LCD blanc et audio clic seul.
