@@ -282,3 +282,13 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Head PR #46 : `5f44914f6800d564d1a82e5f1c1fc6e0cb258540`.
 - Build #348 / run `44989679449` déclenché pour ce head ; statut `in_progress` au dernier contrôle.
 - L'artefact `zulu-apk-343` (run #343) ne contient PAS le sélecteur local des moteurs ; ne pas le présenter comme APK final. Attendre l'artefact du run #348 ou d'un build ultérieur sur le head courant.
+
+
+## APK ZuluTek — réglage VHS indépendant de ECO (2026-11-22)
+
+- Inspection : les scanlines du LCD étaient dessinées uniquement si `!ecoOn` ; le mode ECO supprimait donc involontairement l’effet VHS.
+- Réparation : nouvelle ligne VHS dans OPTIONS (SEL pour sélectionner, ALG pour ON/OFF), activée par défaut pour préserver le rendu antérieur et persistée sous la clé SharedPreferences `vhs`.
+- ECO est désormais indépendant : il conserve son rôle de throttling/gestion des animations ; l’effet VHS dépend exclusivement de `st.vhsOn`.
+- Shift court sur VHS et reset global restaurent VHS=ON. Aucun changement au firmware, à la palette du clavier, aux zones tactiles ou au moteur audio.
+- Commits code : LcdView `81352ba2c67949e42fb9e871a8d84f46105cf4d5`, MainActivity `ab3305b035152e0c3dbc696740a1ab07303d5c87`. Documentation : bible eee336a386a04cd867d8245e1b7925a71f767ad8, handoff c9e2756c3139452aee91f7bfab810edb84c07ebf.
+- Validation : inspection statique uniquement ; build CI et essai sur appareil non encore réalisés. Cette intervention ne prétend pas résoudre les autres symptômes signalés (LCD blanc, couleurs du clavier, son limité au clic, fiabilité générale des contrôles).
