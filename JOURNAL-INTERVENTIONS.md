@@ -506,3 +506,14 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - **Contrôles effectués** : lecture de la branche et du rapport, comparaison avec la tête précédente `0ec6f690` (identique avant intervention), interrogation des workflows PR de cette tête (aucun run retourné). **Aucun build Gradle, test Android, test réseau, audio, USB ou matériel exécuté** ; la CI du nouveau commit reste à vérifier.
 - **Ouvert** : retours prématurés des API asynchrones `Fm1Usb`, concurrence ZTF, reconnexion USB, RIFF/WAV, tests ZuluLink, audio et UI ; secret de signature en clair à traiter uniquement après décision de migration.
 - **Décisions nécessaires** : migration de signature et contrat d'API asynchrone. Aucun flash, rotation de clé ni fusion.
+
+
+## Suivi audit APK ZuluTek — 22/11/2026, 19:25 (Paris)
+
+- Périmètre : [FZuluTek PR #48](https://github.com/FlyingZulu/FZuluTek/pull/48), branche `audit/zulutek-usb-midi-20261122`, toujours en brouillon ; aucune intervention sur le firmware.
+- **Code committé** : `51dc900a7b594f5df754bc78f133d929d45b24e2` — `ZtfTransport.fileWrite` refuse désormais `chunk <= 0` avant tout début de transfert. Garde prudente contre des appels avec bloc nul ou négatif ; aucun changement du protocole nominal.
+- **Rapport GitHub committé** : `661113106e44ec3cde3af0a66066ce382848fc68` — ajout de la passe d'audit et des limites dans `docs/AUDIT-APK-2026-11-22.md`.
+- **Contrôles réellement effectués** : comparaison GitHub de la branche contre `main` avant modification (15 commits d'avance, aucun retard) ; lecture statique de `Fm1Usb.kt` et `ZtfTransport.kt` ; interrogation des runs PR associés à la tête précédente `ff7790e6` (aucun run retourné).
+- **Non validé** : compilation Gradle, CI des nouveaux commits, tests unitaires du cas `chunk=0`, Android, USB-MIDI, ZTF réel, audio, réseau, matériel.
+- **Risques ouverts** : réponses ZTF non corrélées à la commande dans `zrequest`, retours prématurés des API USB asynchrones, reconnexion USB, parsing WAV/RIFF, ZuluLink et recette UI/DSP. Décisions nécessaires sur contrat API USB et stratégie de signature ; aucune clé changée.
+- Aucun flash, aucune fusion, aucune rotation de clé.
