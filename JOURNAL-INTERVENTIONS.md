@@ -389,3 +389,15 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Compilation et publication réussies ; artefact debug `zulu-apk-375`, 6 319 460 octets, non expiré. Release dédiée ignorée sur la branche PR.
 - Le head documentaire `6234e541f44af9738fedb894fc8036ca9338c77c` déclenche le build #376 ; statut en cours au dernier contrôle.
 - PR #46 reste ouverte et non fusionnée ; aucun test matériel USB/FM-1 ou réseau multi-appareils.
+
+
+## 2026-11-22 — Ordonnancement connexion USB et contrat asynchrone
+
+- Défaut : `MainActivity.linkScan()` lançait PING / liste fichiers / WATCH immédiatement après `scan()`, avant la fin éventuelle de la permission Android et de l'ouverture de l'interface USB.
+- Correction : callback `Fm1Usb.onConnected` émis seulement après transport ZTF prêt ; les premières requêtes sont maintenant mises en file après ce signal.
+- Les API `ping/pull/push/pushNamed/pullNamed` ne renvoient plus de faux résultats synchrones avant exécution du worker. Les résultats passent par les callbacks de statut/progression.
+- Appelants Kotlin inspectés : 11 fichiers de l'app Android ; les usages de ces méthodes ne consomment pas les valeurs de retour supprimées.
+- Commits : `088051da7f3b6cbbe05aca0e5e97b8431b2499c3`, `7a3acd1cd00e615f662b84f747e20b4b0f64512a`, `774f685c35a12aae59fd0f6f70b111af09b9635d`.
+- Build #376 / run `44994960851` : succès, artefact debug `zulu-apk-376` (6 319 448 octets). Builds #377, #378 et #379 encore en cours au dernier contrôle ; #379 valide le head contenant le contrat asynchrone.
+- Handoff Android mis à jour au commit `14b9da61490c8f20cfdedf03039e4f4235ab218a`.
+- Aucun essai physique USB/FM-1. Aucun firmware ou patch embarqué modifié.
