@@ -417,3 +417,11 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Build #378 / run `44995046947` : succès, head `7a3acd1cd00e615f662b84f747e20b4b0f64512a`, artefact debug `zulu-apk-378` (6 319 627 octets).
 - Build #379 / run `44995115379` : succès, head `774f685c35a12aae59fd0f6f70b111af09b9635d`, artefact debug `zulu-apk-379` (6 319 423 octets).
 - Build #381 / run `44995223691` valide la conservation des notifications PQ_CHANGED pendant les commandes ZTF ; en cours au dernier contrôle. Build #382 / run `44995254811` vérifie le handoff correspondant ; en cours.
+
+
+### Résultats CI — builds #380 à #382 (22/11/2026)
+- Build #380 / run `44995169635` : succès sur le handoff intermédiaire `14b9da61490c8f20cfdedf03039e4f4235ab218a`, artefact debug `zulu-apk-380` (6 319 490 octets).
+- Build #381 / run `44995223691` : succès sur le commit code `5331cb00924fb14820fe9cd6af08f38002a83cf9`, qui préserve les notifications companion `PQ_CHANGED` pendant les requêtes ZTF brutes ; artefact debug `zulu-apk-381` (6 319 501 octets).
+- Build #382 / run `44995254811` : succès sur le handoff final `a7fbee7648c967d3737c0372933c942676a004fe`, artefact debug `zulu-apk-382` (6 319 497 octets).
+- Pour les trois runs, compilation et publication APK réussies ; étape Release dédiée ignorée (aucune release signée revendiquée).
+- PR #46 reste ouverte, non fusionnée, mergeable. Aucun essai matériel Android, USB/FM-1 ou réseau multi-appareils effectué ; les symptômes LCD blanc et audio clic seul restent à diagnostiquer sur appareil avec Logcat.
