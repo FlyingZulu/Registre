@@ -242,3 +242,11 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - CI #342 lancé sur le head `a4f3fa0d40528903e75204b6cc4b5c8c6bf39053` ; résultat pas encore connu. Aucun test appareil.
 - Étape suivante : sur téléphone, filtrer Logcat `ZuluTekLCD` et comparer tailles/placement/trace du premier dessin. Ne pas modifier le moteur graphique avant ces observations.
 
+
+
+## APK Android — audit sélection moteur synthé (2026-11-22)
+
+- Constat : `HOME` court alterne les parties et sélectionne localement LEAD/engine 0 et BASSE/engine 1. Les moteurs 2 FM, 3 SUB et 4 8BIT ne sont pas sélectionnables par un contrôle tactile local identifié dans `MainActivity.kt`.
+- Le seul sélecteur 0..4 observé est le MIDI CC 80 entrant via ZuluLink. Le setter natif `ztek_set_engine()` accepte bien `0..4` : la lacune est côté interface locale.
+- Aucun mapping modifié : ALG reste l'encodeur waveform, HOME long reste LINK. Un contrôle local doit être choisi avant d'altérer les commandes tactiles.
+- Lecture statique uniquement, aucun test appareil. Détail consigné dans le handoff Android.
