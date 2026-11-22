@@ -195,3 +195,30 @@ Le correctif ne résout pas le LCD blanc, le son limité à un clic, les moteurs
 
 ### Priorité suivante
 Ajouter une instrumentation diagnostique minimale et peu intrusive : résultat du démarrage Oboe, état/fréquence/format/canaux du flux, compteur de callbacks et crête de sortie. Afficher un avertissement clair si le démarrage échoue. Ensuite seulement, construire l'APK via CI et suivre une note de l'événement tactile jusqu'au buffer de sortie. Ne pas augmenter les gains ni modifier le mapping à l'aveugle.
+
+
+## 2026-11-22 — Clavier APK : touches blanches et noires roses
+
+### Demande
+L'utilisateur demande que les touches du clavier de l'APK soient blanches et que les touches noires soient roses.
+
+### Modification effectuée
+- Fichier : `app-zulutek/src/main/java/com/zulutek/preview/SurfaceView.kt`.
+- Commit palette : `f88d38a69bf5a846aefb2270db913f77b8ac7cd8`.
+- Touches blanches : dégradé ivoire clair `#FFFEFC → #E4E0E5`.
+- Touches noires : dégradé rose `#FF8BC8 → #D92B83`.
+- Palette dédiée, indépendante du skin DA ZULU / MAISON : les couleurs du clavier restent donc blanc/rose même si l'utilisateur change de skin.
+- Les états actifs gardent le mélange ambre existant.
+- Aucun changement de géométrie, hit-test, notes, slots looper, glissando, ni événements tactiles.
+
+### Documentation
+- `docs/ANDROID-AUDIO-NETWORK-HANDOFF.md` complété avec les couleurs, le périmètre et les limites de validation.
+- Commit documentation : `67e52a4ffb8f80f705993f9a90a155c9b6fe9151`.
+
+### Build et état de PR
+- Le push du commit code a déclenché GitHub Actions « Build APK », run [44988931691](https://github.com/FlyingZulu/FZuluTek/actions/runs/44988931691), run #337. Au dernier relevé, statut `in_progress` ; ne pas annoncer de build réussi ni distribuer d'APK avant vérification de la conclusion et de l'artefact.
+- PR [#46](https://github.com/FlyingZulu/FZuluTek/pull/46) : ouverte, non fusionnée. Head incluant la documentation : `67e52a4ffb8f80f705993f9a90a155c9b6fe9151`.
+- Pas de test visuel sur appareil pour l'instant. À vérifier après build : rendu blanc/rose sous les deux skins, visibilité des états ambre, zones tactiles inchangées et absence de régression des touches/looper.
+
+### Suite de mission
+Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, moteurs synthé, transport, séquenceurs et boîte à rythmes restent à diagnostiquer. Priorité de preuve : rendre observable le démarrage Oboe et son callback, puis suivre une note jusqu'au buffer de sortie. Ne pas retoucher au firmware FM-1 ni aux patches embarqués.
