@@ -265,3 +265,13 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Artefact `zulu-apk-343` (6 315 769 octets), SHA-256 `8a5c30f1f9a9c6c89af0766495d240eb96a0208f5993337ff961c0584f405663`.
 - Cet artefact correspond au head `a4f3fa0d40528903e75204b6cc4b5c8c6bf39053` et contient les changements de code diagnostic audio + instrumentation LCD. Le head actuel `577fee2fd3961a2af4e236e7e15c1fced56dd33d` ajoute seulement la documentation de l'audit moteur et le suivi du registre depuis ce code ; run #344 vérifie le head courant.
 - Le build réussi ne prouve pas le comportement sur appareil. Pas de test Android réel effectué.
+
+
+## APK Android — ajout du sélecteur local de moteur (2026-11-22)
+
+- Lacune confirmée : auparavant HOME court n'exposait que LEAD/engine 0 et BASSE/engine 1 ; moteurs 2 FM, 3 SUB et 4 8BIT disponibles seulement via CC80 externe.
+- Ajout d'une ligne `ENGINE` dans OPTIONS (page 16) : SEL sélectionne la ligne, ALG règle 0..4 ; valeurs ATEK303 / PLUK / FM / SUB / 8BIT.
+- Changement immédiat par `ZtekAudio.setEngine()`, valeur affichée sur LCD et persistée (`SharedPreferences engine`). CC80 synchronise également préférence et partie affichée.
+- Mapping principal préservé : ALG reste waveform sur MAIN ; HOME court conserve BASSE/LEAD/DRUMS/LOOP ; HOME long reste LINK.
+- Commits : MainActivity `c157c75a6f17ff010b64829b5048d77d0879f55c` ; LcdView `69729922105169b115dfcb4739cfb29a543f81ad` ; bible `${ds.result.commit_sha}` ; handoff `${hs.result.commit_sha}`.
+- Validation statique uniquement ; build CI du nouveau head et test tactile réel à faire.
