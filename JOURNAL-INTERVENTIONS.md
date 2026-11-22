@@ -517,3 +517,11 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - **Non validé** : compilation Gradle, CI des nouveaux commits, tests unitaires du cas `chunk=0`, Android, USB-MIDI, ZTF réel, audio, réseau, matériel.
 - **Risques ouverts** : réponses ZTF non corrélées à la commande dans `zrequest`, retours prématurés des API USB asynchrones, reconnexion USB, parsing WAV/RIFF, ZuluLink et recette UI/DSP. Décisions nécessaires sur contrat API USB et stratégie de signature ; aucune clé changée.
 - Aucun flash, aucune fusion, aucune rotation de clé.
+
+
+## 22/11/2026 — Candidate musicale ZuluTek Android
+
+- **Livraison** — APK debug ARM64 `ZuluTek-debug-56b64f53.apk`, badge `B56b64f53`, commit [`56b64f53`](https://github.com/FlyingZulu/FZuluTek/commit/56b64f539a58c11bae022d8630b02b976fe8e89e). SHA-256 du fichier signé `4002987adc3918ede0228e7a6b81dd75a6206eaadddbd0658d52b7f28227c596`. PR #48 en brouillon. [Build GitHub Actions](https://github.com/FlyingZulu/FZuluTek/actions/runs/45057315064)
+- **Changements committés** — Relâchement des notes maintenues, gestes à plusieurs doigts, accords REC et transports Shift, resampling GLO+pad, lecture SMP interpolée et quantifiée au tempo, démarrage Oboe et ZuluLink, CC collectifs et redémarrage UDP. Corrélation des réponses ZTF et statut LOAD. [Rapport d’audit](https://github.com/FlyingZulu/FZuluTek/blob/audit/zulutek-usb-midi-20261122/docs/AUDIT-APK-2026-11-22.md)
+- **Validé** — Assemblage Gradle local, contrôle du badge embarqué et de l’ABI, intégrité de l’APK et signature v2/v3 avec le certificat Zulu historique. Banc stéréo natif ASan/UBSan sans rapport, détection de fuites désactivée dans cet environnement. Cinq moteurs et relâchements, séquenceur, ARP, drums, looper MIDI, resampling, SMP simulé, sirène, FX/LFO, macro, SNAP et export/import de preset. Tests ZTF Kotlin et codec Python verts. ZuluLink en UDP local, cinq exécutions de deux cycles chacune après la correction du redémarrage.
+- **À tester sur appareil** — Mise à jour de l’installation existante, sortie audio Oboe, gestes et affichage Android, micro, persistance des presets après relance, USB-MIDI et ZTF/UAC sur le FM‑1, ZuluLink entre appareils. Aucun essai physique effectué. [Recette musicale unique](https://github.com/FlyingZulu/FZuluTek/blob/56b64f539a58c11bae022d8630b02b976fe8e89e/docs/RECETTE-APK.md)
