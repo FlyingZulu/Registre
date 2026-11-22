@@ -318,3 +318,11 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Nettoyage MainActivity : suppression de la seconde lecture redondante des 16 sources lorsque VHS est activé ; lecture de secours conservée sur pages 6..10 lorsque VHS est désactivé. Commit `96728ede72f0aed37d2ce51c2e05440a4c400f16`.
 - Build #362 / run `44992316338` déclenché pour le commit LcdView ; statut `in_progress` au moment de cette note. Attendre sa réussite et vérifier l'artefact avant de valider le dernier micro-déplacement.
 - PR #46 reste ouverte, non fusionnée, empilée sur PR #45. Aucun changement du firmware FM-1. Aucun essai sur appareil Android physique à ce stade.
+
+
+## 2026-11-22 — Résultat build #362 et validation du head suivant
+
+- Build #362 / run `44992316338` : **succès** sur `fead29cd20935683454a553b2c020beba59bf28c`. Compilation APK de test et publication réussies. Artefact `zulu-apk-362`, 6 317 504 octets, non expiré. L'étape Release APK dédiée est restée ignorée.
+- Le build #362 ne contient pas le commit MainActivity `96728ede72f0aed37d2ce51c2e05440a4c400f16` (suppression du polling redondant). Le head de PR #46 a ensuite reçu une mise à jour documentaire `b2a83024807d204ae44f7f46e145837b64ad7c47` ; le build du head intégrant les deux derniers changements doit encore être vérifié.
+- Handoff Android actualisé dans `docs/ANDROID-AUDIO-NETWORK-HANDOFF.md`.
+- PR #46 reste ouverte et non fusionnée, empilée sur PR #45. Aucun firmware/patch embarqué FM-1 modifié. Aucun essai sur appareil Android physique.
