@@ -250,3 +250,10 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Le seul sélecteur 0..4 observé est le MIDI CC 80 entrant via ZuluLink. Le setter natif `ztek_set_engine()` accepte bien `0..4` : la lacune est côté interface locale.
 - Aucun mapping modifié : ALG reste l'encodeur waveform, HOME long reste LINK. Un contrôle local doit être choisi avant d'altérer les commandes tactiles.
 - Lecture statique uniquement, aucun test appareil. Détail consigné dans le handoff Android.
+
+
+## Suivi CI / PR après consolidation (2026-11-22)
+
+- Head actuel de la PR #46 : `577fee2fd3961a2af4e236e7e15c1fced56dd33d` (code diagnostic audio + traces LCD + audit moteur + handoff).
+- Run #343 (`44989374629`) sur le head `41cd8689ffe3718f9cded10340990e25e7f60ecf` et run #344 (`44989463361`) sur le head courant sont tous deux indiqués `in_progress` lors du dernier contrôle ; aucun artefact associé n'est encore publié.
+- PR #46 reste ouverte et non fusionnée. Les PR #44 et #45 restent également ouvertes (chaînage de branches). Ne pas fusionner isolément une PR empilée sans vérifier la séquence et la base.
