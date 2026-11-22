@@ -382,3 +382,10 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Handoff Android mis à jour dans FZuluTek au commit `6234e541f44af9738fedb894fc8036ca9338c77c`.
 - Aucun test USB/FM-1 ni réseau multi-appareils effectué. Les retours synchrones trompeurs de `Fm1Usb.ping()/pull()/push()` restent à refondre vers une API asynchrone après revue des appelants.
 - Aucun firmware FM-1, patch embarqué ou autre projet modifié.
+
+
+### Résultat du build #375
+- Build #375 / run `44994810690` : **succès** sur `6a8eb2e20b16af52d74bcacb57ea8b0c4cf963dc`, incluant les validations de champs ZuluLink entrants.
+- Compilation et publication réussies ; artefact debug `zulu-apk-375`, 6 319 460 octets, non expiré. Release dédiée ignorée sur la branche PR.
+- Le head documentaire `6234e541f44af9738fedb894fc8036ca9338c77c` déclenche le build #376 ; statut en cours au dernier contrôle.
+- PR #46 reste ouverte et non fusionnée ; aucun test matériel USB/FM-1 ou réseau multi-appareils.
