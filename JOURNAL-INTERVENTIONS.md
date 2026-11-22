@@ -104,3 +104,42 @@ Priorité 3 : isoler le LCD blanc par mesures/layout et test de dessin minimal, 
 Priorité 4 : vérifier le mapping réel du clavier, des encodeurs, des séquenceurs et de la drum machine sans modifier les fonctions documentées.
 
 Priorité 5 : générer un nouvel APK à partir d'un commit validé et consigner son SHA-256, le workflow et les limites de test.
+
+
+## 2026-11-22 — Addendum : reprise effective de l'audit LCD / audio / clavier
+
+### État de la branche au moment de la reprise
+- PR [#46](https://github.com/FlyingZulu/FZuluTek/pull/46) toujours ouverte, non fusionnée, signalée mergeable par GitHub.
+- Head observé : `c9e0232fef23572ee5346691d952213c60fbdd50` (11 commits, 6 fichiers modifiés).
+- La description de PR renvoie désormais vers ce registre. Vérifier le head à nouveau avant toute écriture ultérieure.
+- Les fichiers Android ont été lus depuis la branche `fix/android-native-audio-thread-safety`, et non depuis une APK locale ou une branche supposée.
+
+### Faits techniques nouvellement confirmés
+1. **Démarrage audio côté Kotlin :** `MainActivity.onCreate()` appelle `ZtekAudio.start()` mais ignore actuellement le booléen de retour. En cas d'échec de création/démarrage Oboe, l'interface poursuit son initialisation ; les méthodes de contrôle Kotlin deviennent ensuite des no-op si le handle vaut zéro. C'est une piste concrète pour le silence/clic, pas encore une cause prouvée. Une correction utile devra rendre l'échec visible et enregistrer l'état réel du flux, sans inventer un succès.
+2. **État moteur initial :** après le démarrage, l'UI impose `setEngine(0)`, configure BPM, tonalité, échelle et paramètres de voix. Vérifier le résultat effectif du flux Oboe et les appels de note avant de conclure à un défaut DSP.
+3. **LCD / superposition :** `rootLayout` est un `FrameLayout` avec fond sombre ; `SurfaceView` (qui est une View Android personnalisée, pas un `android.view.SurfaceView`) est ajoutée en premier, puis `LcdView` au-dessus. Le LCD est positionné ensuite par `placeLcdInBezel()`, déclenché par le layout et un `post`. Le fond de la fenêtre n'explique donc pas à lui seul un écran blanc ; contrôler dimensions, position effective, échelle/transformation et dessin de LcdView après layout.
+4. **Rafraîchissement LCD :** le tick UI tourne toutes les 250 ms et appelle `lcd.invalidate()` (sauf throttling ECO). Ce mécanisme existe bien ; cela ne prouve pas que la vue a une taille/position non nulle ni que son `onDraw` est exécuté.
+5. **Contrat clavier confirmé dans les sources :** la géométrie définit 16 touches blanches et 11 noires ; le hit-test traite les noires avant les blanches. Les commentaires de contrat indiquent les blanches comme slots du looper et les noires comme notes sur MAIN. Le clavier chromatique complet est prévu sur FX/SIREN. Ne pas requalifier les touches blanches de MAIN en notes sans vérifier la bible.
+6. **ALG confirmé :** encodeur rotatif de forme d'onde sur MAIN. La mauvaise association long-press → changement de moteur est supprimée. Ne pas la réintroduire.
+
+### Fichiers et zones relus
+- `MainActivity.kt` : `onCreate`, démarrage moteur, création/ajout des vues, positionnement du LCD, tick de rafraîchissement et lifecycle `onDestroy`.
+- `LcdView.kt` : structure `LcdState`, dimensions logiques 240×240 et commentaires du contrat de rendu RGB565.
+- `SurfaceView.kt` : géométrie du clavier, zones de hit-test et gestion des touches longues.
+- `ZtekAudio.kt` : façade JNI, handle nul en cas d'absence de moteur, `start()`, `noteOn/noteOff` et paramètres.
+- `ztek_engine.cpp` : structure d'état DSP et callback Oboe avec verrou non bloquant déjà ajouté par PR #46.
+
+### Modifications effectuées dans cette addendum
+- Aucune modification de code n'est revendiquée dans cette étape de reprise.
+- Cette entrée consigne les constats et pistes à vérifier avant de changer le comportement.
+- Aucun firmware, patch embarqué ni autre projet n'a été modifié.
+
+### Prochaines opérations, ordre de preuve
+1. Examiner `placeLcdInBezel()`, le `onSizeChanged/onDraw` complet du LCD et les paramètres de layout mesurés. Si possible, ajouter une trace de diagnostic temporaire dans l'APK pour relever largeur/hauteur/position et nombre de dessins.
+2. Rendre le statut de `ZtekAudio.start()` observable dans l'UI/logcat, puis vérifier que le callback Oboe est effectivement appelé avec un format/fréquence/canaux cohérents.
+3. Suivre une seule note : événement tactile → `SurfaceListener` → `ZtekAudio.noteOn/noteOff` → JNI → état de voix/gate → rendu → buffer Oboe. Relever aussi le niveau crête avant/après mix/master.
+4. Suivre PLAY/STOP et un step de séquenceur sur la même chaîne ; ne pas corriger simultanément clavier, séquenceur et moteur.
+5. Après chaque changement, construire une APK depuis le head mis à jour via CI, consigner le workflow et le SHA-256 de l'artefact. Aucune validation matérielle ne peut être revendiquée sans test sur appareil.
+
+### Rappel de méthode
+Chaque nouvelle entrée doit distinguer explicitement : **observation**, **hypothèse**, **modification commitée**, **test exécuté**, **résultat** et **reste à faire**. Le silence du moteur, l'écran blanc et les commandes non fonctionnelles restent des symptômes rapportés par l'utilisateur tant qu'une reproduction instrumentée n'a pas identifié leur cause.
