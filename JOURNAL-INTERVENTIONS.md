@@ -308,3 +308,13 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - `MainActivity.kt` : échantillonnage des 16 sources via `ZtekAudio.srcVal` toutes les 250 ms côté thread UI lorsque VHS est activé ; aucun traitement dans le callback audio. LFO non activés automatiquement. VHS OFF désactive l’overlay ; ECO indépendant.
 - Commits : `f6365be209f855054d872c3a7fed4cc17436e0b9` (rendu), `1e6038b54f516f0296d4748c7d88b923b0e78feb` (lecture des sources), documentation ci-jointe.
 - Validation au moment de la note : modifications enregistrées sur la branche PR #46 ; CI et test sur appareil à confirmer. Pas de modification firmware FM-1.
+
+
+## 2026-11-22 — Validation CI et micro-déplacement VHS (APK)
+
+- Build #360 / run `44992055595` : terminé avec succès pour le commit code `1e6038b54f516f0296d4748c7d88b923b0e78feb`; étapes de compilation et publication APK réussies ; artefact `zulu-apk-360` disponible (6 317 258 octets). L'étape Release APK dédiée a été ignorée par le workflow ; il s'agit de l'artefact CI de test.
+- Build #361 / run `44992074995` : terminé avec succès pour le head documentation `f60a5172650d8ac93d8381b8d68067ec40052acf`.
+- Amélioration après revue : ajout d'un vrai micro-déplacement horizontal aléatoire d'une tranche de 1–2 lignes LCD, limité à un pixel logique et déclenché rarement ; la probabilité augmente légèrement avec la modulation. Il s'agit d'un redraw de la tranche, uniquement dans le rendu LCD, sans toucher au framebuffer audio ni au callback audio. Commit LcdView `fead29cd20935683454a553b2c020beba59bf28c`.
+- Nettoyage MainActivity : suppression de la seconde lecture redondante des 16 sources lorsque VHS est activé ; lecture de secours conservée sur pages 6..10 lorsque VHS est désactivé. Commit `96728ede72f0aed37d2ce51c2e05440a4c400f16`.
+- Build #362 / run `44992316338` déclenché pour le commit LcdView ; statut `in_progress` au moment de cette note. Attendre sa réussite et vérifier l'artefact avant de valider le dernier micro-déplacement.
+- PR #46 reste ouverte, non fusionnée, empilée sur PR #45. Aucun changement du firmware FM-1. Aucun essai sur appareil Android physique à ce stade.
