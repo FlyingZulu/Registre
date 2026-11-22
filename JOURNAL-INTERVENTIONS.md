@@ -369,3 +369,16 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Ce build valide le head documentaire/handoff après le build #368 qui avait déjà compilé le code complet de diagnostic LCD/audio et la correction RGB565.
 - PR #46 reste ouverte et non fusionnée, basée sur PR #45. Aucun test physique Android n'a été réalisé ; les symptômes LCD blanc et audio limité à un clic restent à diagnostiquer avec Logcat sur appareil.
 - Aucun firmware FM-1, patch embarqué ni autre projet modifié.
+
+
+## 2026-11-22 — Audit complémentaire des transports Android
+
+- ZTF : filtrage des réponses par caractère de commande ; garde-fous sur taille/allocation et progression des offsets de lecture/écriture afin d'éviter les boucles infinies sur réponses malformées ou sans progression.
+- USB-MIDI : un paquet d'événement de 4 octets n'est déclaré envoyé que si les 4 octets ont été transférés.
+- ZuluLink : démarrage des deux sockets transactionnel avec nettoyage et possibilité de nouvel essai en cas d'échec ; erreur exposée dans Logcat ; notification UI en cas de changement d'adresse IP d'un pair.
+- ZuluLink entrant : validation des valeurs MIDI, tempo fini et borné, beat fini/non négatif, timestamp et PING.
+- Commits Android : `e65ad086b07fb14707799f92b673e9c12c60ee0f`, `8889a214f13c3531912cbd5f49ac3300fc04bfa3`, `dc0918f002f9e90f2d7345b735fa06da7b7cad49`, `3a00748d2b9b9e2b4923f0f252468f4c035cdc76`, `433490e915324460166e9dda39f428b12024b1df`, `6a8eb2e20b16af52d74bcacb57ea8b0c4cf963dc`.
+- Builds #370 à #373 réussis. Build #374 / run `44994695432` réussi, artefact debug `zulu-apk-374` (6 319 159 octets). Build #375 / run `44994810690` encore en cours au moment de cette entrée sur le dernier head réseau.
+- Handoff Android mis à jour dans FZuluTek au commit `6234e541f44af9738fedb894fc8036ca9338c77c`.
+- Aucun test USB/FM-1 ni réseau multi-appareils effectué. Les retours synchrones trompeurs de `Fm1Usb.ping()/pull()/push()` restent à refondre vers une API asynchrone après revue des appelants.
+- Aucun firmware FM-1, patch embarqué ou autre projet modifié.
