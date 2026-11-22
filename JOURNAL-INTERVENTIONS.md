@@ -425,3 +425,13 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Build #382 / run `44995254811` : succès sur le handoff final `a7fbee7648c967d3737c0372933c942676a004fe`, artefact debug `zulu-apk-382` (6 319 497 octets).
 - Pour les trois runs, compilation et publication APK réussies ; étape Release dédiée ignorée (aucune release signée revendiquée).
 - PR #46 reste ouverte, non fusionnée, mergeable. Aucun essai matériel Android, USB/FM-1 ou réseau multi-appareils effectué ; les symptômes LCD blanc et audio clic seul restent à diagnostiquer sur appareil avec Logcat.
+
+
+## 2026-11-22 — Idempotence du scan USB FM-1 (APK)
+
+- Audit du cycle de vie : l'entrée répétée dans la page LINK ou un nouveau scan pendant une session déjà connectée pouvait ouvrir une seconde connexion USB, remplacer les références du transport/thread de surveillance et laisser l'ancien watcher actif.
+- Correction ciblée dans `Fm1Usb.openNow()` : si un transport est déjà connecté, le worker le réutilise et réémet `onConnected` au lieu d'ouvrir une seconde connexion. Les scans répétés pendant une session active deviennent idempotents.
+- Commit : `d6feaae17f7d01470352d8e63da7183c483318a1`.
+- Build #384 / run [45009852514](https://github.com/FlyingZulu/FZuluTek/actions/runs/45009852514) en cours au moment de cette note ; ne pas considérer la correction validée avant le résultat CI.
+- Revue complémentaire : les requêtes companion, ZTF brutes et la lecture watch partagent le même `ReentrantLock` dans `ZtfTransport`. Relecture des validations de longueur et de plages ZuluLink ; aucun autre défaut confirmé ni changement supplémentaire justifié.
+- Aucun test matériel Android/USB/FM-1. Aucun firmware ni patch embarqué modifié. PR #46 reste ouverte et non fusionnée.
