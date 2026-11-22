@@ -411,3 +411,9 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Build #376 / run `44994960851` : succès, artefact `zulu-apk-376` (6 319 448 octets). Build #377 / run `44995039610` : succès, artefact `zulu-apk-377` (6 319 507 octets). Builds #378 / #379 / #380 étaient encore en cours au dernier contrôle. Build #381 / run `44995223691` compile la correction de notifications.
 - Handoff FZuluTek mis à jour au commit `a7fbee7648c967d3737c0372933c942676a004fe`.
 - Aucun essai matériel USB/FM-1 effectué ; firmware et patches inchangés.
+
+
+### Résultats CI supplémentaires — builds #378 et #379
+- Build #378 / run `44995046947` : succès, head `7a3acd1cd00e615f662b84f747e20b4b0f64512a`, artefact debug `zulu-apk-378` (6 319 627 octets).
+- Build #379 / run `44995115379` : succès, head `774f685c35a12aae59fd0f6f70b111af09b9635d`, artefact debug `zulu-apk-379` (6 319 423 octets).
+- Build #381 / run `44995223691` valide la conservation des notifications PQ_CHANGED pendant les commandes ZTF ; en cours au dernier contrôle. Build #382 / run `44995254811` vérifie le handoff correspondant ; en cours.
