@@ -497,3 +497,12 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Vérifié : compte GitHub connecté `FlyingZulu`. Tentative de lecture des favoris par l'endpoint `/user/starred` via l'intégration : **bloquée par les restrictions des endpoints autorisés**. Tentatives de lecture publique de la page Stars et de `/users/FlyingZulu/starred` : non accessibles depuis cette session.
 - **Aucun favori individuel n'a été identifié ni validé**. Aucune dépendance ni aucun code externe intégrés ; licences et compatibilité encore non examinées.
 - Suite : obtenir une liste exportée ou des liens individuels vers les favoris, puis sélectionner les ressources adaptées au DSP Android, UI, USB-MIDI et ZuluLink. Ne pas présumer que les dépôts suggérés par une recherche publique sont des favoris de l'utilisateur.
+
+
+## Suivi audit APK ZuluTek — 22/11/2026, 17:25 (Paris)
+
+- PR [FZuluTek #48](https://github.com/FlyingZulu/FZuluTek/pull/48) conservée en brouillon ; branche `audit/zulutek-usb-midi-20261122`.
+- **Nouveau correctif committé** : `c4e9a375`, dans `ZuluLink.kt`, capture de sockets UDP non nullables dans les lambdas des threads de réception pour éviter un problème de typage Kotlin avec les variables locales nullables mutables. Rapport GitHub complété au commit `ff7790e6`.
+- **Contrôles effectués** : lecture de la branche et du rapport, comparaison avec la tête précédente `0ec6f690` (identique avant intervention), interrogation des workflows PR de cette tête (aucun run retourné). **Aucun build Gradle, test Android, test réseau, audio, USB ou matériel exécuté** ; la CI du nouveau commit reste à vérifier.
+- **Ouvert** : retours prématurés des API asynchrones `Fm1Usb`, concurrence ZTF, reconnexion USB, RIFF/WAV, tests ZuluLink, audio et UI ; secret de signature en clair à traiter uniquement après décision de migration.
+- **Décisions nécessaires** : migration de signature et contrat d'API asynchrone. Aucun flash, rotation de clé ni fusion.
