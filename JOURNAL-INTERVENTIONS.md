@@ -444,3 +444,12 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Revue du watcher de paramètres : `ZtfTransport.poll()` attend sur `ZtfLink.read()`, dont la file de réception est interruptible. L'ancien `catch(Exception)` pouvait absorber l'interruption et lancer un sommeil de reprise de 500 ms ; une reconnexion rapide risquait de laisser l'ancien watcher actif.
 - Correction dans `Fm1Usb.kt`, commit `fc9cfbb86ef992f027e41234b51aec3c2d22049d` : arrêt explicite à l'interruption, y compris pendant les temporisations ; les erreurs ordinaires ne déclenchent une reprise que si la connexion reste active.
 - Validation CI de ce dernier commit en attente. Pas de test matériel, aucun firmware ni patch embarqué modifié, PR #46 non fusionnée.
+
+
+## 22/11/2026 — Audit USB FM-1 : débranchement et ré-énumération
+
+- Défaut statique confirmé : le chemin de scan idempotent ne comparait que `connected` et `transport != null`. Après retrait physique, un indicateur de connexion périmé pouvait conduire à réutiliser un transport appartenant à l'ancienne énumération USB.
+- Correction dans FZuluTek : receiver `ACTION_USB_DEVICE_DETACHED`, fermeture sérialisée sur le worker, interruption du watcher, fermeture du lien MIDI et remise à zéro de l'identité du périphérique actif. Le chemin de réutilisation exige désormais l'égalité de l'identifiant USB actif et du périphérique rescanné.
+- Commits code : `b883f1fe8722194b191011473742a97740b17538`, `556f65de08db939b9a519788733e16cc4f1fa2f3`. Handoff FZuluTek : `ab224fa44bb5a713d4ecce59c81b459f13fbe057`.
+- CI en attente au moment de cette entrée ; essais physiques à faire : débranchement pendant transfert, reconnexion rapide, scans répétés et autorisation USB.
+- Aucun firmware FM-1, patch embarqué ou projet hors périmètre modifié. PR #46 non fusionnée.
