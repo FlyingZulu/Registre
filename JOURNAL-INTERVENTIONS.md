@@ -296,3 +296,5 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Revue complémentaire : correction de la borne de sélection visuelle OPTIONS (0..6) pour rendre VHS sélectionnable, commit `fe0838d47d65ce86a868dc39d52730720a2d014d` ; handoff complété : 497c4cf976bd3c33aa989eea40c92c99153656c2.
 
 - Revue du pipeline LCD : les retours anticipés de nombreuses pages évitaient l’ancien overlay VHS placé en fin de `onDraw()`. Déplacement de l’overlay dans `blitTo()` pour couvrir toutes les pages LCD, commit `0297db2a17e8b729e8d81c1bd35dce78caa7312f` ; handoff `04bf3820422a77fd7df1e5c94507ec28379310a2`. Validation statique uniquement, build et appareil en attente.
+
+- Audit clavier APK : les constantes ivoire (`#FFFFFEFC`→`#FFE4E0E5`) et rose (`#FFFF8BC8`→`#FFD92B83`) sont effectivement consommées par les boucles de dessin des touches ; seul l’état actif les mélange vers l’ambre. Aucune substitution DA ZULU/MAISON identifiée. La teinte turquoise signalée n’est pas expliquée par le code inspecté : vérification sur APK et appareil/capture nécessaire. Pas de changement clavier non justifié. Handoff : 16a5ea4551bc1db4faa7ae7a3162a488a4e5047f.
