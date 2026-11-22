@@ -453,3 +453,11 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Commits code : `b883f1fe8722194b191011473742a97740b17538`, `556f65de08db939b9a519788733e16cc4f1fa2f3`. Handoff FZuluTek : `ab224fa44bb5a713d4ecce59c81b459f13fbe057`.
 - CI en attente au moment de cette entrée ; essais physiques à faire : débranchement pendant transfert, reconnexion rapide, scans répétés et autorisation USB.
 - Aucun firmware FM-1, patch embarqué ou projet hors périmètre modifié. PR #46 non fusionnée.
+
+
+## 22/11/2026 — Audit Oboe : nettoyage après échec de démarrage
+
+- Défaut statique confirmé dans `ztek_start()` : si `openStream()` réussissait mais `requestStart()` échouait, `z->out` restait non nul. Un appel ultérieur pouvait donc retourner un faux succès via le test `if (z->out) return 1`, sans flux audio démarré et sans possibilité de retry.
+- Correction Android dans `app-zulutek/src/main/cpp/ztek_engine.cpp` : fermeture puis remise à `nullptr` du flux lorsque `requestStart()` échoue. Aucun changement DSP, aucun changement du chemin de rendu réussi.
+- Commit code FZuluTek : `34bd37e5228551746cf215b9d99429094350c0ff`.
+- Build CI en attente ; aucun essai sur appareil Android/Oboe. Aucun firmware FM-1, patch embarqué ou projet hors périmètre modifié.
