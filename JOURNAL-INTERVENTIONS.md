@@ -294,3 +294,5 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Validation : inspection statique uniquement ; build CI et essai sur appareil non encore réalisés. Cette intervention ne prétend pas résoudre les autres symptômes signalés (LCD blanc, couleurs du clavier, son limité au clic, fiabilité générale des contrôles).
 
 - Revue complémentaire : correction de la borne de sélection visuelle OPTIONS (0..6) pour rendre VHS sélectionnable, commit `fe0838d47d65ce86a868dc39d52730720a2d014d` ; handoff complété : 497c4cf976bd3c33aa989eea40c92c99153656c2.
+
+- Revue du pipeline LCD : les retours anticipés de nombreuses pages évitaient l’ancien overlay VHS placé en fin de `onDraw()`. Déplacement de l’overlay dans `blitTo()` pour couvrir toutes les pages LCD, commit `0297db2a17e8b729e8d81c1bd35dce78caa7312f` ; handoff `04bf3820422a77fd7df1e5c94507ec28379310a2`. Validation statique uniquement, build et appareil en attente.
