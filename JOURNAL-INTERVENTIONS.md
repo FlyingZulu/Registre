@@ -292,3 +292,5 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Shift court sur VHS et reset global restaurent VHS=ON. Aucun changement au firmware, à la palette du clavier, aux zones tactiles ou au moteur audio.
 - Commits code : LcdView `81352ba2c67949e42fb9e871a8d84f46105cf4d5`, MainActivity `ab3305b035152e0c3dbc696740a1ab07303d5c87`. Documentation : bible eee336a386a04cd867d8245e1b7925a71f767ad8, handoff c9e2756c3139452aee91f7bfab810edb84c07ebf.
 - Validation : inspection statique uniquement ; build CI et essai sur appareil non encore réalisés. Cette intervention ne prétend pas résoudre les autres symptômes signalés (LCD blanc, couleurs du clavier, son limité au clic, fiabilité générale des contrôles).
+
+- Revue complémentaire : correction de la borne de sélection visuelle OPTIONS (0..6) pour rendre VHS sélectionnable, commit `fe0838d47d65ce86a868dc39d52730720a2d014d` ; handoff complété : 497c4cf976bd3c33aa989eea40c92c99153656c2.
