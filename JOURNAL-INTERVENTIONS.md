@@ -345,3 +345,12 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Optimisation du diagnostic audio : le calcul de crête est maintenant déclenché une seule fois après une note, et non à chaque callback silencieux ; commit `cb384588d184118e899c62f2f6dce71a9152c927`.
 - Builds #367 / run `44992903393` (RGB565) et #368 / run `44992946473` (head diagnostic audio optimisé) encore en cours au moment de la note.
 - PR #46 ouverte/non fusionnée ; aucun firmware FM-1 modifié. Aucun essai matériel Android réalisé : ces logs attendent une capture Logcat sur appareil pour conclure sur les symptômes LCD blanc et audio clic seul.
+
+
+## 2026-11-22 — Head diagnostic compilé et handoff synchronisé
+
+- Build #368 / run `44992946473` : compilation APK de test et publication réussies sur `cb384588d184118e899c62f2f6dce71a9152c927` ; artefact `zulu-apk-368`, 6 318 292 octets, non expiré. Release dédiée ignorée sur branche PR.
+- Le build #368 comprend les logs one-shot Oboe, le diagnostic premier blit LCD, la conversion RGB565 corrigée et le calcul de crête déclenché uniquement après note.
+- Handoff mis à jour dans FZuluTek au commit `ac074c0dcb706a58f1bc5b1932e43505a4e0cfa2` ; un build documentaire supplémentaire est attendu.
+- Build #367 sur le commit intermédiaire `7753fa2e9892f48f0971c9ec038e6542527fe54d` toujours en cours au dernier contrôle ; non bloquant puisque #368 valide un commit descendant incluant cette correction.
+- Aucun test Android physique ; collecte Logcat requise pour conclure. PR #46 reste ouverte/non fusionnée ; aucune modification FM-1 firmware.
