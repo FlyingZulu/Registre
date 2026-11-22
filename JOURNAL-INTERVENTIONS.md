@@ -489,3 +489,11 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Audit fonctionnel Android complet encore à conduire ; checks audio, séquenceurs, UI et connectivité, puis recette sur appareil en fin de parcours.
 - Risque de sécurité à examiner : configuration de signature avec secret en clair dans `app-zulutek/build.gradle`. Ne pas modifier la signature effective sans plan de migration pour les APK déjà installées.
 - Coordination nécessaire avec les autres interventions APK (notamment FZuluTek PR #44-#46) pour éviter de confondre dépôts, branches et validations.
+
+
+## 22/11/2026 — Ressources GitHub favorites : accès à qualifier
+
+- Demande : exploiter les dépôts favoris du compte `FlyingZulu` pour identifier des composants utiles à l'audit et aux réparations APK ZuluTek.
+- Vérifié : compte GitHub connecté `FlyingZulu`. Tentative de lecture des favoris par l'endpoint `/user/starred` via l'intégration : **bloquée par les restrictions des endpoints autorisés**. Tentatives de lecture publique de la page Stars et de `/users/FlyingZulu/starred` : non accessibles depuis cette session.
+- **Aucun favori individuel n'a été identifié ni validé**. Aucune dépendance ni aucun code externe intégrés ; licences et compatibilité encore non examinées.
+- Suite : obtenir une liste exportée ou des liens individuels vers les favoris, puis sélectionner les ressources adaptées au DSP Android, UI, USB-MIDI et ZuluLink. Ne pas présumer que les dépôts suggérés par une recherche publique sont des favoris de l'utilisateur.
