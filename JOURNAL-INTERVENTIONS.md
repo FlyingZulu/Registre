@@ -461,3 +461,31 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Correction Android dans `app-zulutek/src/main/cpp/ztek_engine.cpp` : fermeture puis remise à `nullptr` du flux lorsque `requestStart()` échoue. Aucun changement DSP, aucun changement du chemin de rendu réussi.
 - Commit code FZuluTek : `34bd37e5228551746cf215b9d99429094350c0ff`.
 - Build CI en attente ; aucun essai sur appareil Android/Oboe. Aucun firmware FM-1, patch embarqué ou projet hors périmètre modifié.
+
+
+## 22/11/2026 — APK FIRST FZulu-Control : version SHA test et réparation CI
+
+### Périmètre et décisions
+
+- Périmètre **APK Android seulement** dans `FlyingZulu/FZulu-Control`, module `app-zulutek` ; aucun firmware FM-1 ni patch embarqué modifié.
+- La batterie de tests réels sur téléphone est **réservée à la fin** de l'audit. Pas de validation matérielle implicite.
+- La documentation de suivi est répliquée vers la page Notion « Registre — carnet de bord ZuluTek » ; ce dépôt Registre reste le journal canonique.
+
+### Modifications effectivement committées
+
+- PR draft [FZulu-Control #4](https://github.com/FlyingZulu/FZulu-Control/pull/4), branche `audit/apk-debug-build-badge` : badge LCD de build SHA très lisible pendant 10 secondes au démarrage et rappel dans OPTIONS, affichage réservé au debug (commits `4adcca5`, `ceccbbe`).
+- Protocole de recette différée : `docs/APK-FIRST-TEST-PLAN.md` (commit `d71768e`).
+- La première CI de la PR a échoué avec deux erreurs Kotlin `Unresolved reference: BuildConfig` sur `LcdView.kt` et `MainActivity.kt`, [run 45013905364](https://github.com/FlyingZulu/FZulu-Control/actions/runs/45013905364). Correctif committé : activer `buildConfig true` dans `app-zulutek/build.gradle` (commit `7b7cf5c`).
+- Carnet technique de branche : `docs/APK-AUDIT-LOG.md` (commit `0a1e1f1`).
+
+### Validations réellement exécutées
+
+- Avant les nouveaux changements : CI `main` [run 45013837531](https://github.com/FlyingZulu/FZulu-Control/actions/runs/45013837531) **success**.
+- Après le correctif : CI de branche [run 45014296470](https://github.com/FlyingZulu/FZulu-Control/actions/runs/45014296470) **success**, puis [run 45014306463](https://github.com/FlyingZulu/FZulu-Control/actions/runs/45014306463) **success**, HEAD `0a1e1f1cb4a0288e9f2d78e7b3b33e15d77450ba`. Il s'agit d'une preuve de build CI, **pas** d'une recette utilisateur ni d'une validation debug/release visuelle.
+
+### Points ouverts / risques
+
+- PR #4 encore en draft, non fusionnée dans le cadre de cette intervention.
+- Audit fonctionnel Android complet encore à conduire ; checks audio, séquenceurs, UI et connectivité, puis recette sur appareil en fin de parcours.
+- Risque de sécurité à examiner : configuration de signature avec secret en clair dans `app-zulutek/build.gradle`. Ne pas modifier la signature effective sans plan de migration pour les APK déjà installées.
+- Coordination nécessaire avec les autres interventions APK (notamment FZuluTek PR #44-#46) pour éviter de confondre dépôts, branches et validations.
