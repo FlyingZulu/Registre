@@ -360,3 +360,12 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 
 - Build #367 / run `44992903393` : **succès** sur le commit intermédiaire RGB565 `7753fa2e9892f48f0971c9ec038e6542527fe54d`. La correction est également incluse dans #368, qui valide le descendant complet.
 - Build #369 / run `44993081445` : en cours sur le commit documentaire `ac074c0dcb706a58f1bc5b1932e43505a4e0cfa2` au dernier contrôle.
+
+
+## 2026-11-22 — Build #369 : handoff documentaire validé
+
+- Build #369 / run `44993081445` : **succès** sur le commit `ac074c0dcb706a58f1bc5b1932e43505a4e0cfa2`.
+- Compilation et publication des APK de test réussies ; artefact `zulu-apk-369`, 6 318 368 octets, non expiré. L'étape Release APK dédiée est ignorée sur cette branche de PR : il s'agit d'un artefact debug CI, pas d'une release signée.
+- Ce build valide le head documentaire/handoff après le build #368 qui avait déjà compilé le code complet de diagnostic LCD/audio et la correction RGB565.
+- PR #46 reste ouverte et non fusionnée, basée sur PR #45. Aucun test physique Android n'a été réalisé ; les symptômes LCD blanc et audio limité à un clic restent à diagnostiquer avec Logcat sur appareil.
+- Aucun firmware FM-1, patch embarqué ni autre projet modifié.
