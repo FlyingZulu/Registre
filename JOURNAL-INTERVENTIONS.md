@@ -300,3 +300,11 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Audit clavier APK : les constantes ivoire (`#FFFFFEFC`→`#FFE4E0E5`) et rose (`#FFFF8BC8`→`#FFD92B83`) sont effectivement consommées par les boucles de dessin des touches ; seul l’état actif les mélange vers l’ambre. Aucune substitution DA ZULU/MAISON identifiée. La teinte turquoise signalée n’est pas expliquée par le code inspecté : vérification sur APK et appareil/capture nécessaire. Pas de changement clavier non justifié. Handoff : 16a5ea4551bc1db4faa7ae7a3162a488a4e5047f.
 
 - Audit tactile LCD : `lcd.setOnTouchListener` ne traite que BEND (REC+touch), PATCH et XY ; les autres gestes sont consommés sans sélection/édition générique des paramètres MAIN/pages. Ce manque est documenté dans le handoff 7f1558c7b3c3dfad38af4b9e1d272596538b03b9. Pas de mapping générique ajouté tant que chaque paramètre n’a pas été relié à son encodeur et à son setter natif ; préserver les zones BEND/PATCH/XY.
+
+
+## 2026-11-22 — VHS subtil, aléatoire et réactif aux modulations (APK)
+- Demande confirmée : scanlines « traits fins », rendu subtil ; artefacts randomisés et réactifs aux LFO/tools.
+- `LcdView.kt` : trame fine à faible opacité (pas logique de 3 px), faible jitter, micro-artefacts horizontaux rares (1–2 segments courts) régénérés à intervalles pseudo-aléatoires ; intensité/fréquence légèrement influencées par l’activité moyenne des sources de modulation. Overlay conservé dans `blitTo()`, donc limité à l’affichage LCD.
+- `MainActivity.kt` : échantillonnage des 16 sources via `ZtekAudio.srcVal` toutes les 250 ms côté thread UI lorsque VHS est activé ; aucun traitement dans le callback audio. LFO non activés automatiquement. VHS OFF désactive l’overlay ; ECO indépendant.
+- Commits : `f6365be209f855054d872c3a7fed4cc17436e0b9` (rendu), `1e6038b54f516f0296d4748c7d88b923b0e78feb` (lecture des sources), documentation ci-jointe.
+- Validation au moment de la note : modifications enregistrées sur la branche PR #46 ; CI et test sur appareil à confirmer. Pas de modification firmware FM-1.
