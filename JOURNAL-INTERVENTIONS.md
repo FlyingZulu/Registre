@@ -222,3 +222,13 @@ L'utilisateur demande que les touches du clavier de l'APK soient blanches et que
 
 ### Suite de mission
 Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, moteurs synthé, transport, séquenceurs et boîte à rythmes restent à diagnostiquer. Priorité de preuve : rendre observable le démarrage Oboe et son callback, puis suivre une note jusqu'au buffer de sortie. Ne pas retoucher au firmware FM-1 ni aux patches embarqués.
+
+
+## APK Android — rendre l'échec de démarrage audio visible (2026-11-22)
+
+- Constat : `MainActivity.onCreate()` ignorait le booléen de `ZtekAudio.start()`. Si `nativeCreate()` ou `nativeStart()` échouait, l'interface s'initialisait malgré un handle audio nul ; les commandes de synthèse devenaient alors silencieusement inopérantes.
+- Correction : journal `ZuluTekAudio` au succès/échec et Toast explicite en cas d'échec. Pas de modification du DSP, du gain, du routage, du mapping tactile ni du firmware.
+- Commit code : `8ca0aaf54911a9bfe616823ffa2882e3046fe88b`.
+- Commit documentation : 7239becdf6eb03ee042e5c03b03c2c9951432ff0.
+- Validation : inspection statique uniquement pour ce changement. Le run CI #337 (`44988931691`) est SUCCESS mais porte le commit antérieur `f88d38a69bf5a846aefb2270db913f77b8ac7cd8` ; il ne valide donc pas cette nouvelle modification. Build et test appareil restent à faire.
+- Suite : compiler le nouveau head, observer Logcat tag `ZuluTekAudio`, puis mesurer les callbacks Oboe et le niveau crête si le flux démarre.
