@@ -257,3 +257,11 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Head actuel de la PR #46 : `577fee2fd3961a2af4e236e7e15c1fced56dd33d` (code diagnostic audio + traces LCD + audit moteur + handoff).
 - Run #343 (`44989374629`) sur le head `41cd8689ffe3718f9cded10340990e25e7f60ecf` et run #344 (`44989463361`) sur le head courant sont tous deux indiqués `in_progress` lors du dernier contrôle ; aucun artefact associé n'est encore publié.
 - PR #46 reste ouverte et non fusionnée. Les PR #44 et #45 restent également ouvertes (chaînage de branches). Ne pas fusionner isolément une PR empilée sans vérifier la séquence et la base.
+
+
+## Résultat build APK diagnostic (2026-11-22)
+
+- Run #343 (`44989374629`) : `success` ; compilation et publication des APK réussies.
+- Artefact `zulu-apk-343` (6 315 769 octets), SHA-256 `8a5c30f1f9a9c6c89af0766495d240eb96a0208f5993337ff961c0584f405663`.
+- Cet artefact correspond au head `a4f3fa0d40528903e75204b6cc4b5c8c6bf39053` et contient les changements de code diagnostic audio + instrumentation LCD. Le head actuel `577fee2fd3961a2af4e236e7e15c1fced56dd33d` ajoute seulement la documentation de l'audit moteur et le suivi du registre depuis ce code ; run #344 vérifie le head courant.
+- Le build réussi ne prouve pas le comportement sur appareil. Pas de test Android réel effectué.
