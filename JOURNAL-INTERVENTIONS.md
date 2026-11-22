@@ -326,3 +326,12 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Le build #362 ne contient pas le commit MainActivity `96728ede72f0aed37d2ce51c2e05440a4c400f16` (suppression du polling redondant). Le head de PR #46 a ensuite reçu une mise à jour documentaire `b2a83024807d204ae44f7f46e145837b64ad7c47` ; le build du head intégrant les deux derniers changements doit encore être vérifié.
 - Handoff Android actualisé dans `docs/ANDROID-AUDIO-NETWORK-HANDOFF.md`.
 - PR #46 reste ouverte et non fusionnée, empilée sur PR #45. Aucun firmware/patch embarqué FM-1 modifié. Aucun essai sur appareil Android physique.
+
+
+## 2026-11-22 — Build #363 : head code complet validé
+
+- Build #363 / run `44992319340` : **succès** sur le head code `96728ede72f0aed37d2ce51c2e05440a4c400f16`, qui comprend le micro-déplacement VHS et le nettoyage du polling MainActivity.
+- Étapes « Construire les APK de test » et « Publier les APK » réussies ; artefact `zulu-apk-363`, 6 317 494 octets, non expiré.
+- L'étape Release APK dédiée est ignorée (branche non-main) : artefact de build/debug CI, pas une release signée revendiquée.
+- Build #364 / run `44992522444` en cours sur le commit documentaire `b2a83024807d204ae44f7f46e145837b64ad7c47`, lancé par push du handoff mis à jour. Son résultat reste à vérifier.
+- Aucun test sur appareil Android physique ; rendu réel, latence audio, tactile et symptômes LCD blanc/clavier restent ouverts. PR #46 ouverte, non fusionnée, empilée sur PR #45. Firmware FM-1 inchangé.
