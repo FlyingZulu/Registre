@@ -171,3 +171,27 @@ Ce défaut pouvait laisser une note blanche tenue sur la page SIREN ou laisser s
 
 ### À poursuivre
 Le correctif ne résout pas le LCD blanc, le son limité à un clic, les moteurs de synthèse, le transport Play/Stop, les séquenceurs ni la boîte à rythmes. Continuer l'instrumentation par chaîne (UI → Kotlin → JNI → DSP → Oboe), en commençant par rendre observable le résultat de `ZtekAudio.start()` et le callback de sortie. Respecter strictement l'interdiction de toucher au firmware FM-1 et aux patches.
+
+
+## 2026-11-22 — Mise à jour de passation après audit du démarrage audio
+
+### Documentation Android
+- Mise à jour de `docs/ANDROID-AUDIO-NETWORK-HANDOFF.md` pour indiquer la vraie branche de travail `fix/android-native-audio-thread-safety`.
+- Ajout du constat que `MainActivity.onCreate()` ignore le retour booléen de `ZtekAudio.start()`. Si Oboe ne démarre pas, l'UI poursuit son initialisation alors que le handle audio peut rester nul. C'est une piste d'observabilité, pas une cause prouvée du clic seul.
+- Ajout du cycle de vie des touches blanches et du correctif UP/CANCEL après appui long.
+- Commit documentation : `16157d85c8f4513212a122cd70c1389a73b0db88`.
+
+### Inspection DSP supplémentaire
+- `ztek_create()` initialise la voix ATEK303, le bus de voix, les tranches de mixage à 0,8 et le master à 0,8 ; le routage de voix vers FX est initialisé.
+- `ztek_note_on()` route vers `at_gate()` pour le moteur 0, ou `bass_gate()` pour les moteurs 1..4 ; le rendu choisit `at_render()` ou `bass_render()` selon le moteur.
+- Ces chemins existent dans le code, mais ne prouvent ni que le callback Oboe tourne réellement sur l'appareil, ni que le signal produit est audible. Il reste à instrumenter le callback et les crêtes DSP/bus/master.
+- `ztek_start()` tente le mode Oboe exclusif puis partagé, à 48 kHz float stéréo. L'état réel du flux et le résultat du callback ne sont pas encore exposés à l'UI.
+
+### État PR et validations
+- PR [#46](https://github.com/FlyingZulu/FZuluTek/pull/46) reste ouverte et non fusionnée.
+- Head vérifié : `16157d85c8f4513212a122cd70c1389a73b0db88`; mergeable selon GitHub : `false`.
+- Le connecteur n'a retourné aucun workflow CI associé aux derniers commits. Aucun APK récent ne doit être présenté comme construit ou testé.
+- Aucune validation physique Android/FM-1 n'a été réalisée dans cette étape.
+
+### Priorité suivante
+Ajouter une instrumentation diagnostique minimale et peu intrusive : résultat du démarrage Oboe, état/fréquence/format/canaux du flux, compteur de callbacks et crête de sortie. Afficher un avertissement clair si le démarrage échoue. Ensuite seulement, construire l'APK via CI et suivre une note de l'événement tactile jusqu'au buffer de sortie. Ne pas augmenter les gains ni modifier le mapping à l'aveugle.
