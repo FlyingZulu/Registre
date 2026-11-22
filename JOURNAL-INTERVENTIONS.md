@@ -275,3 +275,10 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Mapping principal préservé : ALG reste waveform sur MAIN ; HOME court conserve BASSE/LEAD/DRUMS/LOOP ; HOME long reste LINK.
 - Commits : MainActivity `c157c75a6f17ff010b64829b5048d77d0879f55c` ; LcdView `69729922105169b115dfcb4739cfb29a543f81ad` ; bible `${ds.result.commit_sha}` ; handoff `${hs.result.commit_sha}`.
 - Validation statique uniquement ; build CI du nouveau head et test tactile réel à faire.
+
+
+## Suivi build après ajout du sélecteur moteur (2026-11-22)
+
+- Head PR #46 : `5f44914f6800d564d1a82e5f1c1fc6e0cb258540`.
+- Build #348 / run `44989679449` déclenché pour ce head ; statut `in_progress` au dernier contrôle.
+- L'artefact `zulu-apk-343` (run #343) ne contient PAS le sélecteur local des moteurs ; ne pas le présenter comme APK final. Attendre l'artefact du run #348 ou d'un build ultérieur sur le head courant.
