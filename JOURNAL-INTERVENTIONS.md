@@ -232,3 +232,13 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Commit documentation : 7239becdf6eb03ee042e5c03b03c2c9951432ff0.
 - Validation : inspection statique uniquement pour ce changement. Le run CI #337 (`44988931691`) est SUCCESS mais porte le commit antérieur `f88d38a69bf5a846aefb2270db913f77b8ac7cd8` ; il ne valide donc pas cette nouvelle modification. Build et test appareil restent à faire.
 - Suite : compiler le nouveau head, observer Logcat tag `ZuluTekAudio`, puis mesurer les callbacks Oboe et le niveau crête si le flux démarre.
+
+
+## APK Android — instrumentation du LCD blanc (2026-11-22)
+
+- L'inspection statique trouve un fond noir explicite dans `LcdView.onDraw()` et un blit du framebuffer RGB565 ; `MainActivity` place le LCD selon `surface.lcdRect()`. Aucune cause certaine du LCD blanc n'est établie.
+- Instrumentation `ZuluTekLCD` : taille de la vue, premier dessin, visibilité, échelle et placement calculé par SurfaceView. Aucun changement du rendu ni de la géométrie.
+- Commits : placement `7b34b62f5dfbba303b6780597c5fe18883e0e80a` ; taille/dessin `a4f3fa0d40528903e75204b6cc4b5c8c6bf39053` ; documentation 41cd8689ffe3718f9cded10340990e25e7f60ecf.
+- CI #342 lancé sur le head `a4f3fa0d40528903e75204b6cc4b5c8c6bf39053` ; résultat pas encore connu. Aucun test appareil.
+- Étape suivante : sur téléphone, filtrer Logcat `ZuluTekLCD` et comparer tailles/placement/trace du premier dessin. Ne pas modifier le moteur graphique avant ces observations.
+
