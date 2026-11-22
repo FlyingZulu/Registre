@@ -143,3 +143,31 @@ Priorité 5 : générer un nouvel APK à partir d'un commit validé et consigner
 
 ### Rappel de méthode
 Chaque nouvelle entrée doit distinguer explicitement : **observation**, **hypothèse**, **modification commitée**, **test exécuté**, **résultat** et **reste à faire**. Le silence du moteur, l'écran blanc et les commandes non fonctionnelles restent des symptômes rapportés par l'utilisateur tant qu'une reproduction instrumentée n'a pas identifié leur cause.
+
+
+## 2026-11-22 — Correctif : note-off garanti après appui long sur touche blanche
+
+### Symptôme / analyse
+Le chemin tactile des touches blanches dans `SurfaceView.onTouchEvent()` émettait un événement DOWN immédiat, puis un événement long après 500 ms. Le callback long remettait `longPosted` à `false`. Au relâchement, l'événement UP était conditionné par `if (longPosted)` : il était donc supprimé dès que l'appui long avait été déclenché.
+
+Ce défaut pouvait laisser une note blanche tenue sur la page SIREN ou laisser sans OFF une note déclenchée via LINK. Il pouvait aussi interrompre les actions momentanées dépendant du relâchement. C'est une cause concrète pouvant expliquer une partie des comportements clavier signalés ; elle n'explique pas à elle seule les autres pannes.
+
+### Modification commitée
+- Fichier : `app-zulutek/src/main/java/com/zulutek/preview/SurfaceView.kt`
+- Commit code : `3828c3b5fb4985811dd6c1c8aaea7c5ee9d1a873`
+- Changement : le relâchement blanc est toujours envoyé sur `ACTION_UP/ACTION_CANCEL`, même si le callback long s'est exécuté.
+- Le callback long et le mapping des touches restent inchangés.
+- Documentation de passation mise à jour dans `docs/ANDROID-AUDIO-NETWORK-HANDOFF.md`, commit `886d8635fc51002e10acfca70e8a2022adb5390c`.
+
+### État PR
+- PR [#46](https://github.com/FlyingZulu/FZuluTek/pull/46), branche `fix/android-native-audio-thread-safety`.
+- Head constaté après les commits ci-dessus : `886d8635fc51002e10acfca70e8a2022adb5390c`.
+- PR ouverte, non fusionnée ; mergeable : `false`.
+
+### Validation
+- Lecture du flux tactile et vérification statique de la condition de relâchement effectuées.
+- Aucun build APK/CI ni test physique sur appareil n'est encore revendiqué.
+- Test ciblé à réaliser sur prochain APK : appui bref et appui long (>500 ms) en SIREN, puis vérification du note-off au relâchement ; répéter en LINK pour vérifier l'envoi OFF ; vérifier que l'enregistrement long du looper reste fonctionnel.
+
+### À poursuivre
+Le correctif ne résout pas le LCD blanc, le son limité à un clic, les moteurs de synthèse, le transport Play/Stop, les séquenceurs ni la boîte à rythmes. Continuer l'instrumentation par chaîne (UI → Kotlin → JNI → DSP → Oboe), en commençant par rendre observable le résultat de `ZtekAudio.start()` et le callback de sortie. Respecter strictement l'interdiction de toucher au firmware FM-1 et aux patches.
