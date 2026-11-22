@@ -435,3 +435,12 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Build #384 / run [45009852514](https://github.com/FlyingZulu/FZuluTek/actions/runs/45009852514) en cours au moment de cette note ; ne pas considérer la correction validée avant le résultat CI.
 - Revue complémentaire : les requêtes companion, ZTF brutes et la lecture watch partagent le même `ReentrantLock` dans `ZtfTransport`. Relecture des validations de longueur et de plages ZuluLink ; aucun autre défaut confirmé ni changement supplémentaire justifié.
 - Aucun test matériel Android/USB/FM-1. Aucun firmware ni patch embarqué modifié. PR #46 reste ouverte et non fusionnée.
+
+
+## 2026-11-22 — Validation USB et arrêt propre du watcher
+
+- Build #384 réussi sur la correction d'idempotence du scan : APK CI `zulu-apk-384`, 6 319 459 octets. Release dédiée ignorée.
+- Build #385 réussi sur le handoff actualisé : APK CI `zulu-apk-385`, 6 319 473 octets. Release dédiée ignorée.
+- Revue du watcher de paramètres : `ZtfTransport.poll()` attend sur `ZtfLink.read()`, dont la file de réception est interruptible. L'ancien `catch(Exception)` pouvait absorber l'interruption et lancer un sommeil de reprise de 500 ms ; une reconnexion rapide risquait de laisser l'ancien watcher actif.
+- Correction dans `Fm1Usb.kt`, commit `fc9cfbb86ef992f027e41234b51aec3c2d22049d` : arrêt explicite à l'interruption, y compris pendant les temporisations ; les erreurs ordinaires ne déclenchent une reprise que si la connexion reste active.
+- Validation CI de ce dernier commit en attente. Pas de test matériel, aucun firmware ni patch embarqué modifié, PR #46 non fusionnée.
