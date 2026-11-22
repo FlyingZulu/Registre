@@ -354,3 +354,9 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Handoff mis à jour dans FZuluTek au commit `ac074c0dcb706a58f1bc5b1932e43505a4e0cfa2` ; un build documentaire supplémentaire est attendu.
 - Build #367 sur le commit intermédiaire `7753fa2e9892f48f0971c9ec038e6542527fe54d` toujours en cours au dernier contrôle ; non bloquant puisque #368 valide un commit descendant incluant cette correction.
 - Aucun test Android physique ; collecte Logcat requise pour conclure. PR #46 reste ouverte/non fusionnée ; aucune modification FM-1 firmware.
+
+
+## 2026-11-22 — Complément CI
+
+- Build #367 / run `44992903393` : **succès** sur le commit intermédiaire RGB565 `7753fa2e9892f48f0971c9ec038e6542527fe54d`. La correction est également incluse dans #368, qui valide le descendant complet.
+- Build #369 / run `44993081445` : en cours sur le commit documentaire `ac074c0dcb706a58f1bc5b1932e43505a4e0cfa2` au dernier contrôle.
