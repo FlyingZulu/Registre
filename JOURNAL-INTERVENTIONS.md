@@ -387,7 +387,7 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 ### Résultat du build #375
 - Build #375 / run `44994810690` : **succès** sur `6a8eb2e20b16af52d74bcacb57ea8b0c4cf963dc`, incluant les validations de champs ZuluLink entrants.
 - Compilation et publication réussies ; artefact debug `zulu-apk-375`, 6 319 460 octets, non expiré. Release dédiée ignorée sur la branche PR.
-- Le head documentaire `6234e541f44af9738fedb894fc8036ca9338c77c` déclenche le build #376 ; statut en cours au dernier contrôle.
+- Le build #376 sur le head documentaire `6234e541f44af9738fedb894fc8036ca9338c77c` a réussi ; artefact `zulu-apk-376` (6 319 448 octets).
 - PR #46 reste ouverte et non fusionnée ; aucun test matériel USB/FM-1 ou réseau multi-appareils.
 
 
@@ -398,7 +398,7 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 - Les API `ping/pull/push/pushNamed/pullNamed` ne renvoient plus de faux résultats synchrones avant exécution du worker. Les résultats passent par les callbacks de statut/progression.
 - Appelants Kotlin inspectés : 11 fichiers de l'app Android ; les usages de ces méthodes ne consomment pas les valeurs de retour supprimées.
 - Commits : `088051da7f3b6cbbe05aca0e5e97b8431b2499c3`, `7a3acd1cd00e615f662b84f747e20b4b0f64512a`, `774f685c35a12aae59fd0f6f70b111af09b9635d`.
-- Build #376 / run `44994960851` : succès, artefact debug `zulu-apk-376` (6 319 448 octets). Builds #377, #378 et #379 encore en cours au dernier contrôle ; #379 valide le head contenant le contrat asynchrone.
+- Builds #376 à #379 : succès ; artefacts debug publiés. Le #379 valide le head contenant le contrat asynchrone.
 - Handoff Android mis à jour au commit `14b9da61490c8f20cfdedf03039e4f4235ab218a`.
 - Aucun essai physique USB/FM-1. Aucun firmware ou patch embarqué modifié.
 
@@ -416,7 +416,7 @@ Le travail global continue : écran LCD blanc, audio qui ne produit qu'un clic, 
 ### Résultats CI supplémentaires — builds #378 et #379
 - Build #378 / run `44995046947` : succès, head `7a3acd1cd00e615f662b84f747e20b4b0f64512a`, artefact debug `zulu-apk-378` (6 319 627 octets).
 - Build #379 / run `44995115379` : succès, head `774f685c35a12aae59fd0f6f70b111af09b9635d`, artefact debug `zulu-apk-379` (6 319 423 octets).
-- Build #381 / run `44995223691` valide la conservation des notifications PQ_CHANGED pendant les commandes ZTF ; en cours au dernier contrôle. Build #382 / run `44995254811` vérifie le handoff correspondant ; en cours.
+- Builds #381 et #382 : succès ; artefacts et détails consignés dans la section de résultats ci-dessous.
 
 
 ### Résultats CI — builds #380 à #382 (22/11/2026)
