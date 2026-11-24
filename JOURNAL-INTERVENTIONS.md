@@ -1,5 +1,13 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-24 — WestBlOk 0016 · Phaser et repère binôme
+
+**Version à la sortie.** WestBlOk 0016 avec EastBlOk 0183 comme dernière livraison vérifiée. Le rapport du GARAGE conserve le numéro East fixé lors de la compilation.
+
+**Changements.** Phaser stéréo à quatre étages dans Modulation avec Vitesse, Profondeur et Mix. Les cinq effets conservent leurs vitesses jusqu’à mi-course. Le maximum monte de 6,4 à 7,68 Hz.
+
+**Validation DSP.** Un rendu sur ordinateur vérifie le signal direct à Mix zéro, l’effet des cinq modes, la stéréo et la vitesse maximale. Écoute et charge DSP à confirmer sur Redmi.
+
 ## 2026-11-24 — WestBlOk 0015 · Mode jeu et rangement
 
 **Changements.** Repère rotatif des potards renforcé. Le tiroir du bandeau permanent masque les en-têtes des panneaux accrochés et laisse les touches du clavier accessibles. Il restitue les poignées, les réglages de clavier et la poignée de largeur en paysage. Icône Android W et guide intégré mis à jour.
