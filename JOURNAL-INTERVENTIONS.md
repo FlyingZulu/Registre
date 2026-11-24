@@ -1,5 +1,11 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-24 — WestBlOk 0013 · Quatre états du fader Zulu
+
+**Livraison test.** Cette version regroupe les potards verticaux, les poignées masquables, le redimensionnement en paysage, les dispositions par orientation, les Kits avec captures, les quatre slots et les paires Snap. ZU et LU s’activent indépendamment. Le fader reste sans effet avec les deux côtés éteints. Un côté inactif utilise la référence, et les deux côtés actifs font évoluer les paramètres entre les deux Snaps.
+
+**Validation.** APK compilée, signée et guide 0013 vérifié dans le paquet. Les quatre états ZU/LU et les paramètres absents d’un côté ont été vérifiés sur ordinateur. Les gestes, la rotation, la restauration des kits avec audio et l’écoute sont à vérifier sur le Redmi.
+
 ## 2026-11-24 — WestBlOk 0012 · Potards, Kits et Snaps
 
 **Livraison test.** Potards à geste vertical, poignées masquables depuis le bandeau et panneaux épinglés redimensionnables en paysage. Dispositions portrait et paysage conservées séparément. Rappel de l’état à l’ouverture, bibliothèque Kits avec captures et quatre slots rapides. Capture sélective des paramètres ZU et LU, sauvegarde des paires et fader Zulu horizontal après DELAY.
