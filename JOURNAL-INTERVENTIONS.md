@@ -6,6 +6,8 @@
 
 **Mode opératoire.** Le schéma et la procédure de diagnostic sont accessibles depuis le mode d’emploi du bloc. Tester chaque étage seul, puis la liaison avec le suivant. En cas de panne, relever la dernière liaison qui répond et la première qui échoue, avec la version, le routage, le geste et le diagnostic. Mettre le schéma à jour avec les changements de connexion. [Méthodes de travail Zulu](https://github.com/FlyingZulu/Atelier-zulu/tree/main/methodes)
 
+**Clarté des décisions.** Consigner des décisions simples et précises. Si une consigne semble contredire une décision précédente, ou si son sens est incertain, demander à Flying Zulu de clarifier et attendre sa réponse avant d’inscrire la décision ou de poursuivre le travail concerné.
+
 **Application au WestBlOk 0006.** Guide de test complété avec le trajet audio, l’entrée FM, les commandes et des points de contrôle. Dans le banc, la molette transmet désormais la valeur Cutoff au moteur. L’aperçu PCM fonctionne indépendamment de la source de la voix, et une destination Turing de timbre laisse le clavier jouer en direct lorsque l’ARP est arrêté.
 
 **Validation.** APK compilée et signature vérifiée. Rendus et essais sur ordinateur pour les sources, l’enveloppe, les horloges, le filtre et la stéréo. Vérifications du microphone, de la molette physique et du contrôleur MIDI sur téléphone à effectuer.
