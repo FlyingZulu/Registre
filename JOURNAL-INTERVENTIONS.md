@@ -1,5 +1,13 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-24 — WestBlOk 0008 · Mode d’emploi dans l’APK
+
+**Changement livré.** Le bouton **Mode d’emploi** au bas du banc ouvre le guide complet embarqué, hors connexion. Le guide de la version 0008 inclut le schéma de routage, la procédure de diagnostic, le bandeau DSP, MIDI Learn et les Oblitérateurs.
+
+**Validation.** Compilation Android et signature vérifiées. Le HTML du guide, sa version et ses sections ont été contrôlés dans l’APK signée. L’ouverture et la lisibilité sur le Redmi restent à vérifier.
+
+**Règle d’itération.** Mettre à jour le guide intégré avec chaque APK et consigner les changements ainsi que les vérifications dans ce registre. [Méthodes de travail Zulu](https://github.com/FlyingZulu/Atelier-zulu/tree/main/methodes)
+
 ## 2026-11-24 — ZuluBlOk · Traçabilité des liaisons
 
 **Décision de Flying Zulu.** Chaque liaison doit être identifiable entre les briques d’un Lego, entre Legos et entre blocs. Le schéma indique d’où part le signal, où il arrive, ce qui l’active et comment vérifier qu’il passe. Les chemins audio et les commandes de notes ou de paramètres sont repérables séparément.
