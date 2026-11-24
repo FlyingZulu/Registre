@@ -1,5 +1,11 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-24 — WestBlOk 0014 · Capture Snap silencieuse et Kits
+
+**Changements.** Panneaux accrochés au premier plan devant le banc. Capture Snap depuis le tiroir du fader Zulu, ciblage comme ASSIGN, réglage de brouillon sans modifier le son, tap pour confirmer et glissé vers le bas pour enregistrer le côté ZU ou LU. Le tiroir Kits propose la bibliothèque ou un slot à la sauvegarde, et les quatre raccourcis affichent le nom du kit.
+
+**Validation.** APK compilée, signature et guide 0014 vérifiés. Le test sur ordinateur a contrôlé l’édition silencieuse, la confirmation, le changement de cible et les quatre états du morphing. La gestuelle des panneaux, les noms de slots et le rappel d’un kit avec captures restent à vérifier sur Redmi.
+
 ## 2026-11-24 — Ancrer les décisions Zulu validées
 
 **Décision de Flying Zulu.** Partir des gestes, du vocabulaire et des icônes déjà validés. Ancrer chaque décision confirmée dans la référence du sujet. Si une évolution est validée, elle devient la norme et le Registre conserve la trace du changement. Une ambiguïté se clarifie avec Flying Zulu avant de modifier la référence.
