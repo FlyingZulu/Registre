@@ -1,5 +1,15 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-24 — ZuluBlOk · Traçabilité des liaisons
+
+**Décision de Flying Zulu.** Chaque liaison doit être identifiable entre les briques d’un Lego, entre Legos et entre blocs. Le schéma indique d’où part le signal, où il arrive, ce qui l’active et comment vérifier qu’il passe. Les chemins audio et les commandes de notes ou de paramètres sont repérables séparément.
+
+**Mode opératoire.** Le schéma et la procédure de diagnostic sont accessibles depuis le mode d’emploi du bloc. Tester chaque étage seul, puis la liaison avec le suivant. En cas de panne, relever la dernière liaison qui répond et la première qui échoue, avec la version, le routage, le geste et le diagnostic. Mettre le schéma à jour avec les changements de connexion. [Méthodes de travail Zulu](https://github.com/FlyingZulu/Atelier-zulu/tree/main/methodes)
+
+**Application au WestBlOk 0006.** Guide de test complété avec le trajet audio, l’entrée FM, les commandes et des points de contrôle. Dans le banc, la molette transmet désormais la valeur Cutoff au moteur. L’aperçu PCM fonctionne indépendamment de la source de la voix, et une destination Turing de timbre laisse le clavier jouer en direct lorsque l’ARP est arrêté.
+
+**Validation.** APK compilée et signature vérifiée. Rendus et essais sur ordinateur pour les sources, l’enveloppe, les horloges, le filtre et la stéréo. Vérifications du microphone, de la molette physique et du contrôleur MIDI sur téléphone à effectuer.
+
 ## 2026-11-22 — Reprise de l'audit fonctionnel et sécurisation du moteur Android
 
 ### Objet
