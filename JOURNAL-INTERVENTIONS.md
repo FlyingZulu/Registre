@@ -1,5 +1,13 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-24 — WestBlOk 0012 · Potards, Kits et Snaps
+
+**Livraison test.** Potards à geste vertical, poignées masquables depuis le bandeau et panneaux épinglés redimensionnables en paysage. Dispositions portrait et paysage conservées séparément. Rappel de l’état à l’ouverture, bibliothèque Kits avec captures et quatre slots rapides. Capture sélective des paramètres ZU et LU, sauvegarde des paires et fader Zulu horizontal après DELAY.
+
+**Décisions pour ce test.** Réouverture et rappel avec Turing et ARP à l’arrêt. Le cadenas du fader protège sa position. La 0012 porte son propre numéro après la compilation 0011 mise en pause.
+
+**Validation.** APK compilée, signature et guide intégré vérifiés. Interpolation, valeurs discrètes et restauration des mappings et masques de notes contrôlés sur ordinateur. Sauvegarde et rappel de captures, rotation, gestes et usage MIDI physique à vérifier sur le Redmi.
+
 ## 2026-11-24 — WestBlOk 0011 · Tiroirs compacts et position des panneaux
 
 **Changements livrés.** Tiroirs plus courts. Croix ronde à gauche et crochet rond à droite, à l’intérieur du panneau. Glissé vers le haut sur le crochet pour déplacer, glissé vers le bas pour passer devant. Alignement magnétique près des bords. Fermeture vers le tiroir d’origine et conservation de la position et du rang tant que le crochet reste actif. Pour le clavier, glissé vers la droite sur le cadenas pour basculer le verrou de registre.
