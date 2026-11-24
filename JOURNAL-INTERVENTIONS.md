@@ -1,5 +1,11 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-24 — WestBlOk 0009 · GARAGE, clavier et gammes
+
+**Changements livrés.** Panneaux indépendants repliables avec fermeture réservée, choix Off / Paléo / Ladder et Sources avant Turing / ARP. Rotation selon Android. Piano et grille 32 notes, gammes prédéfinies et personnalisées, repli du clavier et activation indépendante pour Turing et ARP. MIDI Learn par contact sur la commande, avec état et confirmation dans le bandeau temporaire. Guide 0009 intégré, texte à défilement vertical.
+
+**Validation.** APK compilée et signature vérifiée. Guide contrôlé dans le paquet. Quantification contrôlée sur ordinateur pour les 4 095 sélections non vides, toutes les fondamentales et toutes les notes MIDI. Rendu de l’interface en portrait et paysage, sauvegarde après redémarrage et contrôleur MIDI physique à vérifier sur téléphone.
+
 ## 2026-11-24 — WestBlOk 0008 · Mode d’emploi dans l’APK
 
 **Changement livré.** Le bouton **Mode d’emploi** au bas du banc ouvre le guide complet embarqué, hors connexion. Le guide de la version 0008 inclut le schéma de routage, la procédure de diagnostic, le bandeau DSP, MIDI Learn et les Oblitérateurs.
