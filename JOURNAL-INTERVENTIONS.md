@@ -1,5 +1,11 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-24 — Ancrer les décisions Zulu validées
+
+**Décision de Flying Zulu.** Partir des gestes, du vocabulaire et des icônes déjà validés. Ancrer chaque décision confirmée dans la référence du sujet. Si une évolution est validée, elle devient la norme et le Registre conserve la trace du changement. Une ambiguïté se clarifie avec Flying Zulu avant de modifier la référence.
+
+**Référence.** [Méthodes de l’Atelier · Ancrer une décision validée](https://github.com/FlyingZulu/Atelier-zulu/blob/main/methodes/README.md#ancrer-une-décision-validée)
+
 ## 2026-11-24 — WestBlOk 0013 · Quatre états du fader Zulu
 
 **Livraison test.** Cette version regroupe les potards verticaux, les poignées masquables, le redimensionnement en paysage, les dispositions par orientation, les Kits avec captures, les quatre slots et les paires Snap. ZU et LU s’activent indépendamment. Le fader reste sans effet avec les deux côtés éteints. Un côté inactif utilise la référence, et les deux côtés actifs font évoluer les paramètres entre les deux Snaps.
