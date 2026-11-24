@@ -1,5 +1,11 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-24 — WestBlOk 0010 · Clavier et panneaux accrochés
+
+**Changements livrés.** Zones de touches du piano distinctes. Cadenas de registre commun au piano et à la grille. Glisser change l’octave en silence quand le cadenas est ouvert. Grille de bas gauche vers haut droite, fondamentale colorée. Le crochet fixe le clavier en bas en portrait ou paysage. Les autres panneaux accrochés forment un groupe fixe réordonnable. La fermeture rend la ligne au tiroir d’origine et la réouverture retrouve le rang mémorisé pendant la session.
+
+**Validation.** APK compilée et signature vérifiée. Guide 0010 contrôlé dans le paquet. Géométrie des touches, ordre des rangées et bornes MIDI contrôlés sur ordinateur. Les gestes, le rendu Android et les panneaux accrochés restent à essayer sur le Redmi dans les deux orientations.
+
 ## 2026-11-24 — WestBlOk 0009 · GARAGE, clavier et gammes
 
 **Changements livrés.** Panneaux indépendants repliables avec fermeture réservée, choix Off / Paléo / Ladder et Sources avant Turing / ARP. Rotation selon Android. Piano et grille 32 notes, gammes prédéfinies et personnalisées, repli du clavier et activation indépendante pour Turing et ARP. MIDI Learn par contact sur la commande, avec état et confirmation dans le bandeau temporaire. Guide 0009 intégré, texte à défilement vertical.
