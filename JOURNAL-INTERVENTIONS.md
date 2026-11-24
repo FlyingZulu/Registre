@@ -1,5 +1,11 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-24 — WestBlOk 0015 · Mode jeu et rangement
+
+**Changements.** Repère rotatif des potards renforcé. Le tiroir du bandeau permanent masque les en-têtes des panneaux accrochés et laisse les touches du clavier accessibles. Il restitue les poignées, les réglages de clavier et la poignée de largeur en paysage. Icône Android W et guide intégré mis à jour.
+
+**Validation.** APK compilée, signature, version, icône et guide vérifiés. Les vérifications sur ordinateur des Snaps et du morphing passent. Le rendu, le redimensionnement et les gestes des tiroirs restent à vérifier sur Redmi.
+
 ## 2026-11-24 — WestBlOk 0014 · Capture Snap silencieuse et Kits
 
 **Changements.** Panneaux accrochés au premier plan devant le banc. Capture Snap depuis le tiroir du fader Zulu, ciblage comme ASSIGN, réglage de brouillon sans modifier le son, tap pour confirmer et glissé vers le bas pour enregistrer le côté ZU ou LU. Le tiroir Kits propose la bibliothèque ou un slot à la sauvegarde, et les quatre raccourcis affichent le nom du kit.
