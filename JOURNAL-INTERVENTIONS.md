@@ -1,5 +1,11 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-24 — WestBlOk 0011 · Tiroirs compacts et position des panneaux
+
+**Changements livrés.** Tiroirs plus courts. Croix ronde à gauche et crochet rond à droite, à l’intérieur du panneau. Glissé vers le haut sur le crochet pour déplacer, glissé vers le bas pour passer devant. Alignement magnétique près des bords. Fermeture vers le tiroir d’origine et conservation de la position et du rang tant que le crochet reste actif. Pour le clavier, glissé vers la droite sur le cadenas pour basculer le verrou de registre.
+
+**Validation.** APK compilée et signature vérifiée. Guide 0011 et gestes contrôlés dans le paquet. Les interactions tactiles, la pile et le rendu en portrait et paysage restent à essayer sur le Redmi.
+
 ## 2026-11-24 — WestBlOk 0010 · Clavier et panneaux accrochés
 
 **Changements livrés.** Zones de touches du piano distinctes. Cadenas de registre commun au piano et à la grille. Glisser change l’octave en silence quand le cadenas est ouvert. Grille de bas gauche vers haut droite, fondamentale colorée. Le crochet fixe le clavier en bas en portrait ou paysage. Les autres panneaux accrochés forment un groupe fixe réordonnable. La fermeture rend la ligne au tiroir d’origine et la réouverture retrouve le rang mémorisé pendant la session.
