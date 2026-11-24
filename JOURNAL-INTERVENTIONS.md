@@ -1,5 +1,13 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-24 — WestBlOk 0017 · Tiroirs, Kits, Snaps et Ladder
+
+**Version à la sortie.** EastBlOk 0183, dernière livraison vérifiée du binôme.
+
+**Changements.** Bandeau bleu ciel avec accès au bas du banc et les commandes SNAP, KIT, ASSIGN. Rappel des quatre slots depuis la mémoire après préchargement, mode KIT pour choisir puis confirmer le slot d’enregistrement. Commandes de voix directes et réglages fins en sous-tiroirs. Fader Zulu avec huit banques ZU roses et huit LU jaunes, menu accessible replié, enregistrement via KIT + SNAP. Ladder deux ou quatre pôles, quatre par défaut. Guide intégré avec l’histoire des inspirations du WestBlOk et les nouveaux gestes.
+
+**Validation.** APK compilée et signature vérifiée. Rendu hôte des quatre voix et trois réponses du LPG jusqu’à la sortie stéréo. Les rendus Ladder quatre pôles sont identiques à ceux calculés avec le moteur 0016. Variation de pente en deux pôles et commutations de filtre testées. Gestes Android, rappel sur appareil et écoute à confirmer sur Redmi.
+
 ## 2026-11-24 — WestBlOk 0016 · Phaser et repère binôme
 
 **Version à la sortie.** WestBlOk 0016 avec EastBlOk 0183 comme dernière livraison vérifiée. Le rapport du GARAGE conserve le numéro East fixé lors de la compilation.
