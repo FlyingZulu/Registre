@@ -1,5 +1,9 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-25 — Garage · Plans de vue du deck
+
+**Décision de Flying Zulu.** Cadenas fermé, le deck reste fixe devant. Les tiroirs hors deck défilent derrière, dans l’ordre du signal. Décision de conception consignée. Le comportement reste à vérifier sur le Redmi. [Référence Garage](https://github.com/FlyingZulu/Atelier-zulu/blob/a879aa67df872726e52aeb15c5714685e8ac7d9d/projets/liaison-east-west.md#plans-de-vue-du-deck).
+
 ## 2026-11-25 — Règle impérative de prise d’information
 
 **Décision de Flying Zulu.** Consulter les références pertinentes et vérifier l’existant avant de répondre, de proposer ou de modifier. Si une incertitude subsiste, poser une question ciblée avant d’avancer sur le point concerné. [Règle inscrite dans les méthodes Zulu](https://github.com/FlyingZulu/Atelier-zulu/blob/f03dc5d7132b32b4b509bbfb279a1559bc960acc/methodes/README.md#règles-à-ne-pas-déroger).
