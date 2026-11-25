@@ -1,5 +1,12 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — WEST · Demande d’APK jouable et reprise du banc
+
+**Demandé.** Intégrer le nouveau banc au moteur WEST réel. Le crossfader Zulu garde un seul point central. Le choix de porteuse FM doit proposer individuellement tous les PCM de la banque de WEST. Préserver les commandes et réglages lors de la rotation, avec la disposition propre à chaque orientation et la possibilité de placer les panneaux côte à côte en paysage.
+
+**Vérifié.** L’APK de référence WEST 0020 est disponible. Son manifeste et son code compilé gèrent la rotation sans recréation et mémorisent la disposition par orientation. Le relais situe les sources exactes dans `/workspace/android-build/west-solo`, absent de cet espace. Les branches WEST publiées retrouvées précèdent cette version. L’APK 0020 a une signature différente de la clé de test disponible ici. Aucun nouvel APK ni essai Redmi effectué. [Relais du banc](https://github.com/FlyingZulu/Atelier-zulu/blob/main/projets/liaison-east-west.md#reprendre-et-compiler-le-banc)
+
+
 ## 2026-11-26 — Garage WEST · Gestes et lisibilité du Deck
 
 Le canevas reprend la composition validée des panneaux. En mode palette, l’ancre épingle ou déplace le panneau, et la poignée redimensionne son cadre entier. Le cadenas masque les deux commandes. Le Deck est superposé aux tiroirs et la poignée latérale de défilement a été retirée. Tableau de bord et panneaux compacts, mini-menus réduits, libellés plus gras et contrastés, potentiomètres en relief, tiroirs plats aux couleurs de la chaîne.
