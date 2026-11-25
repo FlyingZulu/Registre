@@ -1,5 +1,12 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — Garage WEST · Gestes et lisibilité du Deck
+
+Le canevas reprend la composition validée des panneaux. En mode palette, l’ancre épingle ou déplace le panneau, et la poignée redimensionne son cadre entier. Le cadenas masque les deux commandes. Le Deck est superposé aux tiroirs et la poignée latérale de défilement a été retirée. Tableau de bord et panneaux compacts, mini-menus réduits, libellés plus gras et contrastés, potentiomètres en relief, tiroirs plats aux couleurs de la chaîne.
+
+**Vérifié dans Chrome.** Épinglage, déplacement, réduction du cadre et disparition des poignées au verrouillage. **À essayer sur Redmi.** Glisser tactile, agrandissement, défilement derrière plusieurs panneaux et lisibilité. [Canevas mobile](https://zulu-garage-west-mobile.confidentfield16.chatgpt.site)
+
+
 ## 2026-11-25 — Format des Canva Zulu
 
 **Consigne permanente de Flying Zulu.** Publier chaque Canva demandé au même format que le Garage WEST · Canevas mobile : une page web interactive, adaptée au téléphone, avec son lien dans la conversation pour l’ouvrir en grand écran. [Canva de référence](https://zulu-garage-west-mobile.confidentfield16.chatgpt.site)
