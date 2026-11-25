@@ -1,5 +1,13 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-25 — EastBlOk 0186 et WestBlOk 0020 · GARAGE commun
+
+**Architecture.** Les deux APK sont produites par le même projet Android et la même activité GARAGE. Chaque variante charge son moteur natif. Le bandeau et l’icône identifient le bloc. Les panneaux exposent les réglages du moteur.
+
+**Parité.** Bandeau DSP, deck et potards détachables, Kits, Snaps, MIDI Learn, Piano/Grille, gammes, diagnostic, capture, Yadaa!, Turing et ARP partagent le même câblage Android. Les deux guides donnent le chemin du signal. L’édition des sources OSC 1/2 et les réglages de synthèse East restent spécifiques.
+
+**Validation.** Tests hôte de la chaîne Java/JNI jusqu’au stéréo pour les deux moteurs, avec PCM direct, granulateur, FM, transports et STOP. Comparaison West avec 0019 identique sur le rendu testé. L’interface, le micro et le MIDI physique restent à confirmer sur Android.
+
 ## 2026-11-25 — EastBlOk 0185 et WestBlOk 0019 · Deck et édition des notes
 
 **Modifications.** La croix des tiroirs libres reste accessible. Le bandeau déverrouille le rangement du deck pour accrocher ou décrocher une carte. West expose ses potards, le dernier potard touché s’inverse et affiche un trait épais. En paysage, un maintien sur son nom l’accroche comme carte. Les sélecteurs se replient, et Reverse est vert menthe. Les deux bancs présentent les quatre commandes de déclenchement et transport sur une rangée. L’Undo/Redo du bandeau partage trois niveaux d’historique pour les mutations et les silences des deux générateurs. Les grains actifs sont montrés sur la forme d’onde. Capture en Normal, Intermédiaire ou Lo-fi. Guides et schémas intégrés.
