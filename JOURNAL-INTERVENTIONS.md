@@ -4,7 +4,7 @@
 
 **Décision de Flying Zulu.** Cadenas fermé, le deck reste fixe devant. Les tiroirs hors deck défilent derrière, dans l’ordre du signal. Décision de conception consignée. Le comportement reste à vérifier sur le Redmi. [Référence Garage](https://github.com/FlyingZulu/Atelier-zulu/blob/a879aa67df872726e52aeb15c5714685e8ac7d9d/projets/liaison-east-west.md#plans-de-vue-du-deck).
 
-**Commandes et réouverture.** L’icône Tiroirs affiche Ancre et Cadenas. Le deck retrouve ses cartes et leur disposition après fermeture et réouverture. Un bouton dédié dans le tableau de bord supérieur est proposé. Essais sur Redmi à effectuer. [Référence Garage](https://github.com/FlyingZulu/Atelier-zulu/blob/84c34de24605a1162d92c81c592a5b2110a7b640/projets/liaison-east-west.md#plans-de-vue-du-deck).
+**Commandes et réouverture.** L’icône Tiroirs affiche Ancre et Cadenas. Le deck retrouve ses cartes et leur disposition après fermeture et réouverture. Un bouton dédié dans le tableau de bord supérieur est proposé, avec une icône de cartes à jouer. Essais sur Redmi à effectuer. [Référence Garage](https://github.com/FlyingZulu/Atelier-zulu/blob/bebf6408b1d471ac00abd7199d918433041c1e0f/projets/liaison-east-west.md#plans-de-vue-du-deck).
 
 ## 2026-11-25 — Règle impérative de prise d’information
 
