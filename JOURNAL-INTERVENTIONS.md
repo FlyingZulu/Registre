@@ -1,5 +1,9 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-25 — Respect strict des règles Zulu
+
+Seul Flying Zulu peut autoriser explicitement une dérogation aux règles des projets Zulu. Reprendre exactement le livrable demandé et vérifier la référence avant toute reproduction à l’identique. Toute variante ou substitution exige son accord. [Règle dans les Méthodes Zulu](https://github.com/FlyingZulu/Atelier-zulu/commit/9700e8df329400caa6bc694b48f53ebb8f890b1c)
+
 ## 2026-11-25 — Garage · Usage final
 
 **Décision de Flying Zulu.** Le Garage et son banc d’essai serviront à l’utilisateur pour tester, diagnostiquer et régler l’application ou le firmware de son instrument. [Méthodes Zulu](https://github.com/FlyingZulu/Atelier-zulu/blob/a2ae9c273b773eb611bcb2b812766311745ecdb0/methodes/README.md#5-garage--diagnostic-accessible-à-lutilisateur).
