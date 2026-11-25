@@ -1,5 +1,13 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-25 — EastBlOk 0184 et WestBlOk 0018 · Bancs de validation
+
+**Repères à la sortie.** East 0184 ↔ West 0018. La ligne de départ V1 attend le retour des testeurs.
+
+**Mise à niveau.** Banque de 27 PCM commune, avec deux OVNI et cinq sons de jouets. Tenue par boucle fondue en PCM direct. Quatre prises Audio In de 30 s par banc, REC rouge, départ au relâchement et arrêt à l’appui suivant. Fenêtre granulaire initiale de 500 ms avec déplacement sur la forme d’onde. Ladder 2 ou 4 pôles, 4 par défaut. Guides intégrés avec schémas, repère visuel de dernière commande. East bleu ciel et West orange clair.
+
+**Vérifications.** Signature et guides des APK, rendu de la banque et de la tenue, durée de capture du tampon, quatre combinaisons de sources et deux Lad‌ders dans East, quatre voix et trois réponses du LPG dans West. Horloges et mélange Turing/ARP contrôlés sur ordinateur. Gestes, micro et écoute restent à confirmer sur appareil.
+
 ## 2026-11-24 — WestBlOk 0017 · Tiroirs, Kits, Snaps et Ladder
 
 **Version à la sortie.** EastBlOk 0183, dernière livraison vérifiée du binôme.
