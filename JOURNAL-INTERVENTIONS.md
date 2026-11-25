@@ -1,5 +1,9 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-25 — Garage · Éléments testés et outils du banc
+
+**Décision de Flying Zulu.** Identifier les éléments internes au BLOK et les outils de test. Les organes simulés se raccordent aux ports avec des signaux et des routages comparables à l’instrument final, pour éprouver chaque brique, Lego ou BLOK isolément. [Carte du circuit](https://github.com/FlyingZulu/Atelier-zulu/blob/${a.commit_sha}/projets/carte-circuit-garage.md#éléments-testés-et-outils-du-banc).
+
 ## 2026-11-25 — Garage · Plans de vue du deck
 
 **Décision de Flying Zulu.** Cadenas fermé, le deck reste fixe devant. Les tiroirs hors deck défilent derrière, dans l’ordre du signal. Décision de conception consignée. Le comportement reste à vérifier sur le Redmi. [Référence Garage](https://github.com/FlyingZulu/Atelier-zulu/blob/a879aa67df872726e52aeb15c5714685e8ac7d9d/projets/liaison-east-west.md#plans-de-vue-du-deck).
