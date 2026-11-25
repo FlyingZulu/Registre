@@ -1,5 +1,11 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-25 — EastBlOk 0185 et WestBlOk 0019 · Deck et édition des notes
+
+**Modifications.** La croix des tiroirs libres reste accessible. Le bandeau déverrouille le rangement du deck pour accrocher ou décrocher une carte. West expose ses potards, le dernier potard touché s’inverse et affiche un trait épais. En paysage, un maintien sur son nom l’accroche comme carte. Les sélecteurs se replient, et Reverse est vert menthe. Les deux bancs présentent les quatre commandes de déclenchement et transport sur une rangée. L’Undo/Redo du bandeau partage trois niveaux d’historique pour les mutations et les silences des deux générateurs. Les grains actifs sont montrés sur la forme d’onde. Capture en Normal, Intermédiaire ou Lo-fi. Guides et schémas intégrés.
+
+**Validation.** APK signées avec appellations EastBlOk et WestBlOk et guides vérifiés. Sur ordinateur, le scénario Mutation Turing → deux trous ARP dans un appui → trou Turing s’annule et se rétablit dans l’ordre sur les deux moteurs. Gestes, rendu, qualité du micro et écoute restent à vérifier sur Android.
+
 ## 2026-11-25 — EastBlOk 0184 et WestBlOk 0018 · Bancs de validation
 
 **Repères à la sortie.** East 0184 ↔ West 0018. La ligne de départ V1 attend le retour des testeurs.
