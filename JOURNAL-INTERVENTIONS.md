@@ -1,5 +1,9 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-25 — Banc maître WEST · reprise de séance
+
+**Décisions consignées.** Ergonomie mobile, tableau de contrôle et catalogue, tiroirs et chaîne, commandes et bandeaux, deck, grille et ports. Le canevas WEST 0031 a été archivé. La fiche distingue les décisions de conception, l’état du canevas et les points restant à réaliser, avec 12 essais groupés pour le Redmi. [Fiche et canevas de reprise](https://github.com/FlyingZulu/Atelier-zulu/blob/2feadbb3cbabfcb052e99b00eb828eca262cf5d9/projets/banc-maitre-west-reprise-2026-11-25.md).
+
 ## 2026-11-25 — Respect strict des règles Zulu
 
 Seul Flying Zulu peut autoriser explicitement une dérogation aux règles des projets Zulu. Reprendre exactement le livrable demandé et vérifier la référence avant toute reproduction à l’identique. Toute variante ou substitution exige son accord. [Règle dans les Méthodes Zulu](https://github.com/FlyingZulu/Atelier-zulu/commit/9700e8df329400caa6bc694b48f53ebb8f890b1c)
