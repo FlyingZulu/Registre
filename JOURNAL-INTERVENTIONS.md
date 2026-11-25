@@ -8,6 +8,8 @@
 
 **Responsabilité des agents.** Flying Zulu rappelle son exigence « je suis pas là pour m'occuper des agents comme d'une classe d'apprentis dissipés, j'ai besoin d'ingénieurs ». Sa formulation figure dans les [Règles à ne pas déroger](https://github.com/FlyingZulu/Atelier-zulu/blob/f8fc1dcced6be97fcc1eadf3c6402bb68f19832e/methodes/README.md#règles-à-ne-pas-déroger).
 
+**Mises à jour.** Vérifier les dernières informations du projet et du Registre avant de répondre ou d’intervenir. Distinguer les faits vérifiés des hypothèses et clarifier les points incertains avant d’agir. [Règle mise à jour](https://github.com/FlyingZulu/Atelier-zulu/blob/a69e4fc0dbce7c8575b5861d351ec10f2141f4cf/methodes/README.md#règles-à-ne-pas-déroger).
+
 ## 2026-11-25 — EastBlOk 0186 et WestBlOk 0020 · GARAGE commun
 
 **Architecture.** Les deux APK sont produites par le même projet Android et la même activité GARAGE. Chaque variante charge son moteur natif. Le bandeau et l’icône identifient le bloc. Les panneaux exposent les réglages du moteur.
