@@ -1,5 +1,9 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-25 — Garage · Usage final
+
+**Décision de Flying Zulu.** Le Garage et son banc d’essai serviront à l’utilisateur pour tester, diagnostiquer et régler l’application ou le firmware de son instrument. [Méthodes Zulu](https://github.com/FlyingZulu/Atelier-zulu/blob/a2ae9c273b773eb611bcb2b812766311745ecdb0/methodes/README.md#5-garage--diagnostic-accessible-à-lutilisateur).
+
 ## 2026-11-25 — Garage · Éléments testés et outils du banc
 
 **Décision de Flying Zulu.** Identifier les éléments internes au BLOK et les outils de test. Les organes voisins sont choisis selon la fonction testée, audio ou MIDI. Les organes simulés se raccordent aux ports avec des signaux et des routages comparables à l’instrument final, pour éprouver chaque brique, Lego ou BLOK isolément. [Carte du circuit](https://github.com/FlyingZulu/Atelier-zulu/blob/a64435898025367ef89e7bedfa97a425745ad79b/projets/carte-circuit-garage.md#éléments-testés-et-outils-du-banc).
