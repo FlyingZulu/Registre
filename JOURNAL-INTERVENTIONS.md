@@ -1,5 +1,9 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-25 — Règle impérative de prise d’information
+
+**Décision de Flying Zulu.** Consulter les références pertinentes et vérifier l’existant avant de répondre, de proposer ou de modifier. Si une incertitude subsiste, poser une question ciblée avant d’avancer sur le point concerné. [Règle inscrite dans les méthodes Zulu](https://github.com/FlyingZulu/Atelier-zulu/blob/f03dc5d7132b32b4b509bbfb279a1559bc960acc/methodes/README.md#règles-à-ne-pas-déroger).
+
 ## 2026-11-25 — EastBlOk 0186 et WestBlOk 0020 · GARAGE commun
 
 **Architecture.** Les deux APK sont produites par le même projet Android et la même activité GARAGE. Chaque variante charge son moteur natif. Le bandeau et l’icône identifient le bloc. Les panneaux exposent les réglages du moteur.
