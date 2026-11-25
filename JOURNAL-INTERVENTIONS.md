@@ -4,6 +4,10 @@
 
 Seul Flying Zulu peut autoriser explicitement une dérogation aux règles des projets Zulu. Reprendre exactement le livrable demandé et vérifier la référence avant toute reproduction à l’identique. Toute variante ou substitution exige son accord. [Règle dans les Méthodes Zulu](https://github.com/FlyingZulu/Atelier-zulu/commit/9700e8df329400caa6bc694b48f53ebb8f890b1c)
 
+## 2026-11-25 — Garage · Composition et mémoires de deck
+
+Le tiroir étiqueté donne accès à un panneau que l’utilisateur peut épingler et placer. Le redimensionnement du panneau est souhaité. Quatre mémoires permettent de rappeler les dispositions d’essai. À terme, les decks des différents projets et les gestes éprouvés sur le banc pourront être repris dans Zulu Control. [Relais EAST/WEST](https://github.com/FlyingZulu/Atelier-zulu/blob/5f5f56fa6585210a32500c2aba67eae866823a22/projets/liaison-east-west.md#composer-et-rappeler-un-deck-dessai)
+
 ## 2026-11-25 — Garage · Usage final
 
 **Décision de Flying Zulu.** Le Garage et son banc d’essai serviront à l’utilisateur pour tester, diagnostiquer et régler l’application ou le firmware de son instrument. [Méthodes Zulu](https://github.com/FlyingZulu/Atelier-zulu/blob/a2ae9c273b773eb611bcb2b812766311745ecdb0/methodes/README.md#5-garage--diagnostic-accessible-à-lutilisateur).
