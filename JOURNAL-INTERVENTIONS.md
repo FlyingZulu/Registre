@@ -6,6 +6,8 @@
 
 **Précision.** Retrouver les consignes et décisions déjà documentées dans GitHub, Notion et les échanges ChatGPT du projet. Pour le Garage, recouper la consigne d’origine avec le Registre et le banc actuel. Solliciter Flying Zulu uniquement si un point précis reste à trancher. [Règle complétée](https://github.com/FlyingZulu/Atelier-zulu/blob/388321fc7402abe67bef3d6147cf1aa8e5e17d42/methodes/README.md#règles-à-ne-pas-déroger).
 
+**Responsabilité des agents.** Flying Zulu rappelle son exigence « je suis pas là pour m'occuper des agents comme d'une classe d'apprentis dissipés, j'ai besoin d'ingénieurs ». Sa formulation figure dans les [Règles à ne pas déroger](https://github.com/FlyingZulu/Atelier-zulu/blob/f8fc1dcced6be97fcc1eadf3c6402bb68f19832e/methodes/README.md#règles-à-ne-pas-déroger).
+
 ## 2026-11-25 — EastBlOk 0186 et WestBlOk 0020 · GARAGE commun
 
 **Architecture.** Les deux APK sont produites par le même projet Android et la même activité GARAGE. Chaque variante charge son moteur natif. Le bandeau et l’icône identifient le bloc. Les panneaux exposent les réglages du moteur.
