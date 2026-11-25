@@ -2,7 +2,7 @@
 
 ## 2026-11-25 — Garage · Éléments testés et outils du banc
 
-**Décision de Flying Zulu.** Identifier les éléments internes au BLOK et les outils de test. Le BLOK est constitué essentiellement de traitement audio. Les organes simulés se raccordent aux ports avec des signaux et des routages comparables à l’instrument final, pour éprouver chaque brique, Lego ou BLOK isolément. [Carte du circuit](https://github.com/FlyingZulu/Atelier-zulu/blob/${a.commit_sha}/projets/carte-circuit-garage.md#éléments-testés-et-outils-du-banc).
+**Décision de Flying Zulu.** Identifier les éléments internes au BLOK et les outils de test. Les organes voisins sont choisis selon la fonction testée, audio ou MIDI. Les organes simulés se raccordent aux ports avec des signaux et des routages comparables à l’instrument final, pour éprouver chaque brique, Lego ou BLOK isolément. [Carte du circuit](https://github.com/FlyingZulu/Atelier-zulu/blob/a64435898025367ef89e7bedfa97a425745ad79b/projets/carte-circuit-garage.md#éléments-testés-et-outils-du-banc).
 
 ## 2026-11-25 — Garage · Plans de vue du deck
 
