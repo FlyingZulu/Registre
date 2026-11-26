@@ -1,5 +1,16 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — EAST 0191 et WEST 0032 · PCM, mutations et sous-menus
+
+Les sous-menus ≡ regroupent les sélecteurs secondaires. Dans Notes, les mutations Temps, Hauteur et Articulation restent disponibles et le switch sélectionne Turing à gauche ou ARP à droite. Diagnostic Turing visible avec attente du clavier, destination et pas. Les deux transports ont été revérifiés avec les moteurs hôtes.
+
+Yadaa! partage le réglage de sens et le lecteur PCM sur les deux variantes. La lecture directe propose micro-boucle à fondu court ou lecture unique. L'audition de la banque suit le Reverse. Les grains conservent leur durée jusqu'à la fin et un fondu accompagne les déplacements de fenêtre. Le BBD démarre à la durée choisie et conserve le glissement de durée en cours d'effet. WEST Modal accentue légèrement les partiels et adoucit leurs crêtes.
+
+- Source `b3be5e17cc0e7a122ce9d7c795917673b958d608`. Gradle 8.7 et JDK 17 `--offline :app:assembleEastDebug :app:assembleWestDebug -PeastReleaseIteration=0191 -PwestReleaseIteration=0032`.
+- Test Chromium avec pont simulé des deux variantes : sous-menu déclenchement, switch de mutation, libellés et sélection d'effet. Mesures hôte : PCM avant/arrière, boucle et lecture unique, variation de taille et position de fenêtre ; transport et signal Java/JNI ; impulsion BBD, différence stéréo Phaser et réponses distinctes OD/RAT/Fuzz/Mojo.
+- Intégrité, contenu et signatures API 29 vérifiés. Essais Redmi, appréciation du timbre Modal, bruits sur captures réelles et reproduction du Turing signalée par le testeur à confirmer.
+- SHA-256 EAST 0191 `002bf78d8273d66037ebe5266f056cf4823d1bfc3158cae098e823b56e1db5c9`. WEST 0032 `9ecf4e63205765be43b67f5c78b44e50c830bc15071a3a25b380fa19d6342545`.
+
 ## 2026-11-26 — EAST 0190 et WEST 0031 · commandes et transports
 
 Le Garage expose les paramètres natifs de chaque panneau dans le Canva, avec deux transports indépendants et lumineux, leurs sélecteurs Libre / Clavier-MIDI, le mix, les deux tempos jusqu’à 300 BPM, les divisions, la synchro, les mutations et les deux Oblitérateurs. La modulation expose le choix d’effet, la vitesse, la profondeur et le mix.
