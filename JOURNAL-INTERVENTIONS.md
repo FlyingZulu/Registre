@@ -1,5 +1,11 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — WestBlOk 0027 · frise et tiroirs synchronisés
+
+Les couleurs du Canva v4 sont échantillonnées dans l’ordre de lecture des tiroirs du banc 0023. Les mêmes valeurs alimentent chaque tiroir et la frise. Le fader Zulu conserve son habillage sombre et sa place au-dessus de la frise. Les bandeaux colorés utilisent l’encre sombre sur les mini-commandes, et les boutons de jeu conservent le contraste du canevas. Les fonctions d’ordre et de placement du banc correspondent au code 0023.
+
+Build WEST réussi. APK intègre et signature vérifiée pour API 29. Bibliothèque ARM64 identique à 0023. Rendu sur Redmi à confirmer. Commit source `c3125455033b25440d6c72105135dcec25b7573d`. Gradle `--offline --no-daemon :app:assembleWestDebug -PwestReleaseIteration=0027 -PeastReleaseIteration=0186`. APK et bundle Git disponibles dans la conversation. SHA-256 APK `1bbdb4acd2a9cd3f867f201399edea19b1144111a4907ed08ba625961c461fd7`.
+
 ## 2026-11-26 — WestBlOk 0026 · couleurs et cadran Canva
 
 Progression orange, jaune, vert, bleu et violet appliquée aux tiroirs dans l’ordre de la 0023. Boutons et états repris du Canva v4, avec suppression des teintes Android héritées sur les fonds concernés. Cadran vert sombre bordé, texte monospace 12, nom à gauche et valeur à droite. Les tailles de texte distinguent les boutons, les bandeaux et le cadran. L’ordre du banc, la rangée Turing / ARP et le placement des tiroirs ont été comparés au code 0023.
