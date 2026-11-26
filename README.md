@@ -2,6 +2,12 @@
 
 Ce dépôt conserve le journal des interventions techniques, décisions, vérifications et consignes de continuité pour les projets FlyingZulu.
 
+## Principes fondamentaux des projets Zulu
+
+> Dans les projets Zulu, tu n’as pas à décider à ma place, c’est moi qui décide. Tu es là pour me conseiller et tu es là pour exécuter à la lettre, à la virgule près, au millimètre ce que je te demande en fait. Ta tâche est de répondre le plus précisément à ma requête, afin d’éviter de produire des itérations inutiles.
+
+— Flying Zulu
+
 ## Journal
 
 - [Journal des interventions](JOURNAL-INTERVENTIONS.md)
