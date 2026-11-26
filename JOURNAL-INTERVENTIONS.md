@@ -1,5 +1,14 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — EAST 0193 et WEST 0034 · recette Notes et régénération ARP
+
+Références 0192/0033 et cahier des charges SEQ+ §2 et §10. Le Garage conserve les commandes validées de Notes. Le switch pilote Turing à gauche ou ARP à droite. Les trois mutations éditent le prochain pas jouable, avec une intensité de 1 à 8 pas par couche. Temps déplace l’attaque, Hauteur modifie la note, Articulation raccourcit la tenue. Le comportement s’applique en Sync et en horloges indépendantes. Régénérer ARP fabrique une phrase répétable à partir des notes, jouable au prochain pas. La régénération s’inscrit dans le kit et l’historique Undo/Redo. Les réglages ARP du cahier des charges sont accessibles dans ≡ : cinq ordres, 1 à 4 octaves, six divisions droites et ternaires, Gate 5–100 %.
+
+- Vérification aller : appuis sur les trois mutations vers les deux cibles, Régénérer ARP, début/fin des Oblitérateurs, transports et réglages via pont simulé. Vérification retour : événements départ/hauteur/fin et modifications réelles du PCM Java/JNI. Vérification du livrable : scripts et guides extraits des deux APK, rejoués en portrait et paysage, inventaire des commandes comparé à 0192/0033. 268 commandes EAST et 266 WEST conservées dans la comparaison avec la même configuration de référence.
+- Mesures PCM à 48 kHz pour l’essai isolé à 120 BPM : mutation Temps mesurée à +1024 et +1280 trames sur EAST (Turing et ARP), +1042 et +1285 sur WEST. Les tests mesurent un changement de forme d’onde pour Hauteur, Articulation et Régénérer ARP. Contrôles des ordres, octaves, horloges, des éditions au pas 64 et du rappel de l’état.
+- Source `310e7c5fb31c00ed2cd6bda0bbd567104177030a`. Gradle 8.7, JDK 17 : `--offline :app:assembleEastDebug :app:assembleWestDebug -PeastReleaseIteration=0193 -PwestReleaseIteration=0034`. Signatures API 29 vérifiées, bibliothèques DSP embarquées inchangées. Le test sur Redmi, l’écoute et le MIDI physique restent à faire.
+- SHA-256 EAST 0193 `842865ccc330cf432e03e38b01e73ba10c6dbf4d263e3d5b385c9909004af3e2`, WEST 0034 `2f7f83ccd427e234a7076b5bfec5b3b60ddac83c586507e3a7c66fb284b70883`.
+
 ## 2026-11-26 — EAST 0192 et WEST 0033 · longueurs Turing et ARP
 
 Garage Notes : Turing à gauche, commandes communes au centre avec le mix, ARP à droite. Longueurs indépendantes de 1 à 64 pas, 8 par défaut et pour les anciens kits. Les mutations et les trous s’étendent à 64 pas et les anciens kits conservent leurs éditions. Annuler et rétablir restent communs.
