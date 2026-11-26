@@ -1,5 +1,13 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — Exemple à ne pas reproduire · confirmer une consigne puis livrer autre chose
+
+Lors de la retouche des tiroirs WestBlOk, Flying Zulu a demandé de supprimer le titre **et la cellule qui lui réservait de la hauteur**, pour que les potards occupent le haut du panneau ouvert. L’agent a confirmé qu’il avait compris, puis a annoncé plusieurs fois la correction avant de vérifier ce résultat dans l’aperçu livré. Flying Zulu a dû reformuler la même demande. Le titre et sa cellule constituaient un seul élément visuel à retirer.
+
+**Règle de travail.** Avant de lancer chaque procédure, s’assurer avec Flying Zulu que le résultat attendu, le périmètre et le travail à exécuter sont compris de la même manière. Une fois l’accord donné, exécuter ce qui a été annoncé et validé. Si le travail doit dévier, soumettre le point à Flying Zulu avant d’agir. Une confirmation de compréhension engage l’agent à livrer le résultat qu’il vient de reformuler.
+
+Vérifier le résultat dans le livrable avant de l’annoncer. Dans ce cas, ouvrir le tiroir et constater que le titre a disparu, que sa cellule ne réserve plus de hauteur et que les commandes remontent. Si un de ces points manque, corriger ou signaler précisément l’écart. [Principes fondamentaux](README.md#principes-fondamentaux-des-projets-zulu) · [Méthodes de travail Zulu](https://github.com/FlyingZulu/Atelier-zulu/blob/main/methodes/README.md)
+
 ## 2026-11-26 — WestBlOk 0027 · frise et tiroirs synchronisés
 
 Les couleurs du Canva v4 sont échantillonnées dans l’ordre de lecture des tiroirs du banc 0023. Les mêmes valeurs alimentent chaque tiroir et la frise. Le fader Zulu conserve son habillage sombre et sa place au-dessus de la frise. Les bandeaux colorés utilisent l’encre sombre sur les mini-commandes, et les boutons de jeu conservent le contraste du canevas. Les fonctions d’ordre et de placement du banc correspondent au code 0023.
