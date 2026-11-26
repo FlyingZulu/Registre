@@ -1,5 +1,13 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — WestBlOk 0025 · Disposition 0023 et habillage Canva
+
+Essai validé pour fabrication par Flying Zulu. Le banc repart des vues Android de la 0023 et conserve l’ordre, les commandes et les gestes. L’habillage transpose les fonds, la palette et le contraste du Canva v4 de la 0024, avec des boutons foncés, les tiroirs colorés, les potards en relief et le fader ZU/LU à rond unique. Le guide embarqué porte le numéro 0025.
+
+Compilation WEST réussie. Intégrité du paquet et signature API 29 vérifiées. Les bibliothèques natives des quatre ABI sont identiques octet pour octet à celles de la 0023. Le scénario audio Turing hôte passe. Contraste calculé supérieur à 6,7:1 pour les libellés des tiroirs et supérieur à 11:1 pour les boutons standard. Le rendu réel, l’épinglage des panneaux et le jeu restent à vérifier sur le Redmi.
+
+Commit source `de31c6ac2f6c588a22f71b99f274f2a657ab501e`. Même environnement Gradle que 0024. Commande `--offline --no-daemon :app:assembleWestDebug -PwestReleaseIteration=0025 -PeastReleaseIteration=0186`. APK et bundle Git livrés dans la conversation. SHA-256 APK `b84f7b8bf3cf1aae92d190a52f8a1c97ec5f3b4abf4ad932ff93f9d2b84e7fc2`.
+
 ## 2026-11-26 — WestBlOk 0024 · Skin Canva v4 embarqué
 
 WEST 0023 sert de base. La version 4 du Canva, source `f4687f5559fa0200ab31608d28c950ab845ffa28`, fournit directement le HTML, les styles et les gestes. Le Garage ouvre ces ressources locales au démarrage. Les commandes principales appellent les méthodes du moteur WEST existant. Ajouts Android dans le skin pour les quatre potards Turing / ARP alignés, les extraits PCM nommés en porteuse FM, l’état DSP et REC, et les mémoires de Deck par orientation. Le fader ZU/LU conserve un rond mobile sur un rail uniforme. Les listes de réglages Android et le banc natif restent accessibles dans Outils du banc. Le catalogue du canevas ne constitue pas un moteur de patch.
