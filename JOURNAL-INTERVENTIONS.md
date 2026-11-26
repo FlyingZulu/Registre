@@ -1,5 +1,16 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — EAST 0192 et WEST 0033 · longueurs Turing et ARP
+
+Garage Notes : Turing à gauche, commandes communes au centre avec le mix, ARP à droite. Longueurs indépendantes de 1 à 64 pas, 8 par défaut et pour les anciens kits. Les mutations et les trous s’étendent à 64 pas et les anciens kits conservent leurs éditions. Annuler et rétablir restent communs.
+
+Règle rappelée par Flying Zulu. Toute commande ou fonction déjà validée doit rester disponible d’une itération à la suivante. Une suppression exige son accord explicite au préalable. Comparer les commandes de la version de référence et du nouveau livrable avant publication.
+
+- Source `9f98e3b7a3ae1e85a3afec2c8637052380f45f4e`. JDK 17, Gradle 8.7 `--offline :app:assembleEastDebug :app:assembleWestDebug -PeastReleaseIteration=0192 -PwestReleaseIteration=0033`.
+- Chromium avec pont simulé : placement des commandes et inventaire comparé à 0191/0032, qui confirme l’ajout des deux longueurs et conserve les autres commandes Notes. Hôte moteur : longueurs 1, 4, 8, 13 et 64, bouclage et notes ARP, édition au 64e pas, undo/redo, migration, scénarios des deux transports.
+- APK et signatures API 29 vérifiées. Bibliothèques DSP embarquées identiques aux références. Installation et jeu sur Redmi à confirmer.
+- SHA-256 EAST 0192 `eeedcab99bcfee072409328d2d269b0a9c16318c38f6266b35f205324532be72`. WEST 0033 `fe4a11110e7357d87184ca364795d0e5d8d09f0e6fe36feff0828582d17010d8`.
+
 ## 2026-11-26 — EAST 0191 et WEST 0032 · PCM, mutations et sous-menus
 
 Les sous-menus ≡ regroupent les sélecteurs secondaires. Dans Notes, les mutations Temps, Hauteur et Articulation restent disponibles et le switch sélectionne Turing à gauche ou ARP à droite. Diagnostic Turing visible avec attente du clavier, destination et pas. Les deux transports ont été revérifiés avec les moteurs hôtes.
