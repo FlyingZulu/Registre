@@ -1,5 +1,13 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — WestBlOk 0024 · Skin Canva v4 embarqué
+
+WEST 0023 sert de base. La version 4 du Canva, source `f4687f5559fa0200ab31608d28c950ab845ffa28`, fournit directement le HTML, les styles et les gestes. Le Garage ouvre ces ressources locales au démarrage. Les commandes principales appellent les méthodes du moteur WEST existant. Ajouts Android dans le skin pour les quatre potards Turing / ARP alignés, les extraits PCM nommés en porteuse FM, l’état DSP et REC, et les mémoires de Deck par orientation. Le fader ZU/LU conserve un rond mobile sur un rail uniforme. Les listes de réglages Android et le banc natif restent accessibles dans Outils du banc. Le catalogue du canevas ne constitue pas un moteur de patch.
+
+Compilation WEST réussie, APK intègre, trois ressources du skin vérifiées dans le paquet, signature Android API 29 identique à 0023. L’inventaire HTML confirme la présence des 135 commandes de la source v4. Syntaxe des scripts vérifiée. Test Turing/ARP sur moteur hôte réussi. Le contrôle interactif Chromium local n’a pas terminé. À valider sur Redmi avec Android System WebView, notamment ouverture hors connexion, dimensions et gestes Deck, lecture clavier et Turing, REC, sélection des 27 PCM et Snap ZU/LU.
+
+Commit source `2886f895398b1a29530e16b247141e45e968286a`. Même environnement Gradle que 0023. Commande `--offline --no-daemon :app:assembleWestDebug -PwestReleaseIteration=0024 -PeastReleaseIteration=0186`. APK et bundle Git joints dans la conversation. SHA-256 APK `784ac56d5de5d6d2e3983d8883bbee12b05689e46e97cad9b81349256c0c0b74`.
+
 ## 2026-11-26 — WestBlOk 0023 · rangée Turing/ARP et reprise du signal
 
 Les quatre potentiomètres de Notes · Turing / ARP sont sur une seule rangée, dans l’ordre du canevas. La mise en page complète reste à comparer sur Android avec le Canva v4 à largeur identique.
