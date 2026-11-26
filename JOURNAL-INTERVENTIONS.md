@@ -1,5 +1,9 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — Protocole de design UI
+
+Flying Zulu valide le canevas éditable sur Android comme option proposée au lancement de chaque design UI. Le croquis exporté sert de base à la finition et la maquette reste éditable jusqu’à validation avant intégration. [Décision dans les méthodes de travail Zulu](https://github.com/FlyingZulu/Atelier-zulu/blob/6ccccd46dd29dac198c5ef21438690c4c1e9e92a/methodes/README.md#protocole-de-design-ui)
+
 ## 2026-11-26 — EAST 0188 et WEST 0029 · ports du Garage
 
 Décision de Flying Zulu. **Capsule** est le terme public pour le niveau appelé **Lego** dans les échanges internes.
