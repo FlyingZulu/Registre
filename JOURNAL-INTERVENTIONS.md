@@ -1,5 +1,42 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — WestBlOk 0021 · Garage mobile et fader Zulu
+
+**Livraison.** WestBlOk-0021.apk, version `0.1.0-test.21`, code 21, paquet `com.flyingzulu.westzulu`. Fichier joint dans la conversation. SHA-256 `f6fbe8aced5f12a245b4fe7a628a6ae9c35c5c42f5d7805bacb107ae956daad2`. EAST 0186 est la référence du binôme.
+
+**Sources exactes.** Commit compilé `bdcdda80c76409e88b4e7ea0bba4d4166d82813a`, avec snapshot de départ `fa393d26dcb2707ca2471d7a2bd8191f28c335e8`. Ce snapshot provient de `/workspace/android-build/west-solo`, dossier sans historique Git initial. Les deux sorties Gradle présentes avant intervention étaient identiques par SHA-256 aux APK WEST 0020 et EAST 0186 du relais. Le bundle Git vérifié contient les deux commits et permet de recréer le checkout par `git clone WestBlOk-0021-sources.bundle west-solo`, puis `git checkout bdcdda80c76409e88b4e7ea0bba4d4166d82813a`. SHA-256 du bundle `924849fbc3d272eb191fd685467258d47080cdd6ec8d9f1e5e00954cf30e4bc2`. [Bundle privé Atelier](https://github.com/FlyingZulu/Atelier-zulu/blob/f636d24baf0677d605d6c16f5e055aca1388edf9/bancs-sources/WestBlOk-0021-sources.bundle)
+
+```bash
+base=/workspace/android-build
+export JAVA_HOME="$base/jdk17" ANDROID_HOME="$base/sdk"
+export ANDROID_USER_HOME="$base/android-user" GRADLE_USER_HOME="$base/gradle-home"
+cd "$base/west-solo"
+"$base/gradle-8.7/bin/gradle" --offline --no-daemon :app:assembleWestDebug -PwestReleaseIteration=0021 -PeastReleaseIteration=0186
+```
+
+L’environnement de reprise utilise JDK 17, SDK 35, NDK 27.2.12479018 et CMake 3.22.1. La clé historique est fournie séparément par l’environnement de signature. Sortie `app/build/outputs/apk/west/debug/app-west-debug.apk`.
+
+**Changements.** Tableau de bord compact, REC relié à la capture, raccourcis du Garage, tiroirs colorés en rangées et potards en relief. Deck devant le défilement, ancre tactile, poignée de largeur et hauteur, verrouillage des outils, quatre mémoires de disposition par orientation par appui long. Le fader ZU/LU affiche un rond mobile sur un axe neutre. La porteuse conserve son choix d’extrait indépendant et présente les 27 PCM par nom. Guide local mis à jour. Le Canva v4 applique la correction du fader sur le même site. [Canva Garage WEST](https://zulu-garage-west-mobile.confidentfield16.chatgpt.site)
+
+**Résultats observés.** Gradle a compilé WEST seul. APK intègre le moteur natif WEST en ARM64 et trois autres ABI, minSdk 26. Signature v2 vérifiée pour API 29, certificat identique à WEST 0020 (`2a42f629cad37172af7e35c9da48ab2c6dfab996e8b3c31b7856ceb46b6a4962`). Essais sur ordinateur avec la boucle audio Java et JNI WEST recompilé, sortie Android simulée, couvrant note ON/OFF, signal stéréo, PCM, granulaire, FM, ARP, Turing et STOP. Les 27 PCM testés individuellement comme porteuses FM ont produit un signal. L’APK contient le guide 0021 autonome et son lecteur bloque les chargements réseau. Aucune installation Android, rotation physique, ouverture effective du guide ou mesure acoustique sur téléphone dans cette session.
+
+**Batterie Redmi Note 8 Pro · Android 10.** Relever le geste, le résultat et la version. Partir d’un patch sec.
+
+1. Installer par-dessus 0020 et vérifier le rappel du dernier kit.
+2. Jouer et relâcher des notes en Piano et en Grille. Essayer la fondamentale et les tailles de grille 3, 6 et 10.
+3. Sur un potard, balayer verticalement, double-taper et vérifier la valeur sans entraîner la liste.
+4. En FM, sélectionner plusieurs PCM par nom, changer le rapport sur une note tenue et écouter le relâchement.
+5. Comparer les voix sèches et le LPG, puis régler Cutoff et résonance.
+6. Fermer Filtre pendant le jeu, régler le Cutoff au contrôleur MIDI puis rouvrir. Confirmer que le traitement reste actif et que l’affichage suit.
+7. Épingler deux panneaux, déplacer par l’ancre et redimensionner dans les deux dimensions. Vérifier le défilement derrière les cadres.
+8. Verrouiller, jouer avec les panneaux épinglés et fermer un tiroir libre. Faire glisser le bouton Deck à droite pour masquer puis rappeler.
+9. En paysage, placer deux cadres côte à côte, mémoriser par appui long sur un slot Deck et tester le retour portrait/paysage. Les réglages et positions propres à chaque orientation doivent revenir.
+10. Glisser ZU/LU à gauche et à droite, vérifier le rond unique et le morphing des Snaps.
+11. Tester REC, son témoin et l’arrêt au nouvel appui. Tester Turing et ARP, mutations, trous, Undo/Redo et STOP AUDIO.
+12. En mode avion, ouvrir le mode d’emploi et faire défiler jusqu’au schéma. Copier le rapport.
+
+**Périmètre restant.** Catalogue d’outils glissables et affichage des adresses de raccord dans le cadran à reprendre séparément. Le Canva est une référence visuelle et les contrôles du banc testent le moteur WEST réel. L’APK est livrée directement dans la conversation, et les sources restent disponibles sur la branche privée citée.
+
 ## 2026-11-26 — Livraison directe des APK
 
 **Consigne permanente de Flying Zulu.** Pour chaque APK demandée, joindre dans la réponse un lien de téléchargement direct vers le fichier `.apk` (lien `sandbox:`), avec son nom et sa version, afin qu’elle soit téléchargeable depuis la conversation sur Android. Un lien vers la Bibliothèque ou GitHub peut servir de référence complémentaire.
