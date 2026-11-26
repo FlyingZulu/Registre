@@ -1,5 +1,11 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — WestBlOk 0026 · couleurs et cadran Canva
+
+Progression orange, jaune, vert, bleu et violet appliquée aux tiroirs dans l’ordre de la 0023. Boutons et états repris du Canva v4, avec suppression des teintes Android héritées sur les fonds concernés. Cadran vert sombre bordé, texte monospace 12, nom à gauche et valeur à droite. Les tailles de texte distinguent les boutons, les bandeaux et le cadran. L’ordre du banc, la rangée Turing / ARP et le placement des tiroirs ont été comparés au code 0023.
+
+Build WEST réussi, intégrité et signature API 29 vérifiées, bibliothèques natives identiques à 0023 pour les quatre ABI. Rendu à confirmer sur le Redmi. Commit source `ddb83f048e69b9d0a31177a4f6783778c0575ca9`. Commande Gradle `--offline --no-daemon :app:assembleWestDebug -PwestReleaseIteration=0026 -PeastReleaseIteration=0186`. SHA-256 APK `8d334d6a60656ef7304c0f32cf89759b212e80b10a8a8b456c473a92768a4cfd`.
+
 ## 2026-11-26 — WestBlOk 0025 · Disposition 0023 et habillage Canva
 
 Essai validé pour fabrication par Flying Zulu. Le banc repart des vues Android de la 0023 et conserve l’ordre, les commandes et les gestes. L’habillage transpose les fonds, la palette et le contraste du Canva v4 de la 0024, avec des boutons foncés, les tiroirs colorés, les potards en relief et le fader ZU/LU à rond unique. Le guide embarqué porte le numéro 0025.
