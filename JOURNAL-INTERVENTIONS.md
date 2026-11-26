@@ -1,5 +1,13 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — EAST 0194 et WEST 0035 · Outils du banc
+
+Dans les deux Garages, le hamburger permanent regroupe STOP AUDIO, l’affichage, la copie et le partage du rapport, le diagnostic, le guide et le sous-menu MIDI. MIDI est un outil du banc. USB, Bluetooth, les notes et CC, MIDI Learn et ses affectations restent disponibles à partir des mêmes services Android. Le sous-menu affiche l’état de connexion et permet de terminer l’apprentissage. Le tiroir MIDI et la flèche vers le bas ont été retirés à la demande de Flying Zulu. Les guides embarqués indiquent les nouveaux accès.
+
+- Chromium avec pont Android simulé, ressources extraites des APK : ouverture et fermeture des deux menus, emplacement unique des actions et transmission au pont, état de MIDI Learn, absence du tiroir MIDI et de la flèche, dans les deux orientations et variantes. Sur hôte : notes MIDI, affectation CC par canal, fin d’apprentissage, effacement, transports et arrêt audio.
+- Source `68c4c2c5df95305bb306ca048063cd71ca771426`. Gradle 8.7 / JDK 17 : `--offline :app:assembleEastDebug :app:assembleWestDebug -PeastReleaseIteration=0194 -PwestReleaseIteration=0035`. Signatures API 29 vérifiées, permissions et bibliothèques DSP identiques à 0193/0034. Presse-papiers et connexion MIDI physique sur le Redmi à confirmer.
+- SHA-256 EAST 0194 `8e826ebf436e0b42460b534b2680b13c3090cbd39e4ec910abdbb8ccd5a25f1b`, WEST 0035 `10c95183329e257972ff5a76a2034ca9543d440a2c8ac7d1243b32af544efdf6`.
+
 ## 2026-11-26 — Protocole Zulu · débrief, banc d’essai et retours Redmi
 
 **Décision de Flying Zulu.** Pendant un débrief, reformuler le résultat attendu et l’intervention proposée, puis attendre le feu vert. En cas de doute, présenter le passage en cause, sa source et l’effet concret, puis en discuter avant de trancher. Toute évolution proposée du BLOK ou d’un choix validé exige une décision explicite avant intervention.
