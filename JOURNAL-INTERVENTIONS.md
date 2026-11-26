@@ -1,5 +1,15 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — EAST 0189 et WEST 0030 · frise du circuit
+
+Références audio EAST 0188 et WEST 0029, source `808b4f2fd298be4674dbfe629b46f815b2a9e7ef`. La frise lit le catalogue de la variante et indique séparément le chemin audio, les notes et les sources auxiliaires. EAST filtre dans la voix. WEST place l'insertion du filtre après la modulation et avant le DELAY. Les segments ouvrent leurs panneaux par identifiant, indépendamment de l'ordre des tiroirs.
+
+- Source `e46724e5bb44b6c03060aa62599687aed400742d`. Build JDK 17 et Gradle 8.7, `gradle --offline :app:assembleEastDebug :app:assembleWestDebug -PeastReleaseIteration=0189 -PwestReleaseIteration=0030`.
+- Chromium avec pont Android simulé, pour les deux variantes : ordre de la frise, sélection après déplacement DOM des panneaux, appel Cutoff vers le pont. Contrôle du catalogue réussi. Catalogues et fichiers de raccordements des commandes identiques. Comparaison des moteurs sur les quatre ABI : seule la note ELF d’identification de compilation diffère. Intégrité et signatures API 29 vérifiées, même certificat que les références.
+- Installation, écoute et gestes intégrés sur Redmi à vérifier, notamment notes/gate, micro/PCM/Yadaa!, FM et effets face aux versions de référence.
+- SHA-256 EAST 0189 `4d4efe2e939a443c160f69821cb9e2a28e0895469c3cb0ca4ebba04225056825`.
+- SHA-256 WEST 0030 `50d03a898cf4bd9010ed868bba5aadb3a3629cd7f4873c1643a38dea95577348`.
+
 ## 2026-11-26 — Protocole de design UI
 
 Flying Zulu valide le canevas éditable sur Android comme option proposée au lancement de chaque design UI. Le croquis exporté sert de base à la finition et la maquette reste éditable jusqu’à validation avant intégration. [Décision dans les méthodes de travail Zulu](https://github.com/FlyingZulu/Atelier-zulu/blob/6ccccd46dd29dac198c5ef21438690c4c1e9e92a/methodes/README.md#protocole-de-design-ui)
