@@ -1,5 +1,17 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — Protocole Zulu · débrief, banc d’essai et retours Redmi
+
+**Décision de Flying Zulu.** Pendant un débrief, reformuler le résultat attendu et l’intervention proposée, puis attendre le feu vert. En cas de doute, présenter le passage en cause, sa source et l’effet concret, puis en discuter avant de trancher. Toute évolution proposée du BLOK ou d’un choix validé exige une décision explicite avant intervention.
+
+**Règle du Garage rappelée.** La frise indique la place des modules dans le moteur chargé et leurs raccords réels. Flying Zulu organise les panneaux du banc selon ses besoins d’essai. Le déplacement d’un panneau préserve la place et l’affectation des commandes du BLOK, le circuit et son rendu à réglages égaux. La consigne de parcours de la fiche d’essai a été rectifiée. [Recette corrigée](https://github.com/FlyingZulu/ZuluTek/blob/65b1d2879261cb6a04e9c503d6339b14a2652d97/docs/GARAGE-RECETTE-EAST-WEST.md)
+
+**À chaque APK de test.** Donner la variante, la version, les changements et les vérifications effectuées. En cas de doute, demander un à trois gestes ciblés, dans l’ordre de priorité, avec le résultat attendu et le retour utile. Flying Zulu peut jouer librement si aucun point particulier n’est à confirmer. L’agent reporte chaque « OK » dans la grille avec le geste, le résultat et la version, puis rejoue les gestes concernés à l’itération suivante. La séance de recette complète reste disponible au moment choisi par Flying Zulu.
+
+**Retour à suivre · WEST Modal.** Flying Zulu rapporte que la voix Modal lui convenait au début et que son timbre s’est dégradé au fil des itérations. Il a aussi observé des fonctions déplacées, disparues ou au comportement modifié entre des passages au banc. Retrouver pour chaque écart la dernière version conforme et le premier écart reproductible. La retouche Modal documentée en 0032 fournit un point de comparaison. La cause et la première version affectée restent à établir à réglages identiques.
+
+[Décision dans les Méthodes Zulu](https://github.com/FlyingZulu/Atelier-zulu/blob/fa2304741eaa20669014d8ee10014cf28046c833/methodes/README.md#essais-prioritaires-sur-redmi) · [Grille des gestes](https://github.com/FlyingZulu/Atelier-zulu/blob/main/projets/grille-gestes-garage.md)
+
 ## 2026-11-26 — EAST 0193 et WEST 0034 · recette Notes et régénération ARP
 
 Références 0192/0033 et cahier des charges SEQ+ §2 et §10. Le Garage conserve les commandes validées de Notes. Le switch pilote Turing à gauche ou ARP à droite. Les trois mutations éditent le prochain pas jouable, avec une intensité de 1 à 8 pas par couche. Temps déplace l’attaque, Hauteur modifie la note, Articulation raccourcit la tenue. Le comportement s’applique en Sync et en horloges indépendantes. Régénérer ARP fabrique une phrase répétable à partir des notes, jouable au prochain pas. La régénération s’inscrit dans le kit et l’historique Undo/Redo. Les réglages ARP du cahier des charges sont accessibles dans ≡ : cinq ordres, 1 à 4 octaves, six divisions droites et ternaires, Gate 5–100 %.
