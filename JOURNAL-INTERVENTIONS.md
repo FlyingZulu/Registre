@@ -1,5 +1,16 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — WEST 0028 et EAST 0187 · aperçu validé raccordé à l’audio
+
+Les deux variantes embarquent le canevas validé « Filtre sans titre ». Le titre et sa cellule disparaissent à l’ouverture, les potards occupent le haut du panneau, la frise indique le tiroir actif et SNAP est au-dessus du fader Zulu. EAST conserve ses deux oscillateurs et son enveloppe propre. Les commandes détaillées restent accessibles depuis le banc Android natif, via Outils du banc. Les deux guides sont embarqués.
+
+Contrôles exécutés dans Chrome à 393 px avec interface Android simulée pour les deux variantes. Démarrage, ordre de la frise, titre masqué de Filtre, mouvement de potard, appels de transport Turing, note ON/OFF clavier et choix PCM vérifiés. Tests audio hôtes Java/JNI réussis pour EAST et WEST avec sortie Android simulée. APK intégrales et signatures vérifiées pour Android 10, certificats identiques aux versions précédentes. L’essai intégré sur Redmi reste ouvert.
+
+Commit source `fe3dd79e31bde0dcf9386f5ed041a8f106069f53`. Gradle `--offline --no-daemon :app:assembleWestDebug :app:assembleEastDebug -PwestReleaseIteration=0028 -PeastReleaseIteration=0187`. APK et bundle source livrés dans la conversation.
+
+- WEST 0028 SHA-256 `3a138be010a58039224c5d3002e36656a49085cff2365b464d0f73e13d060783`.
+- EAST 0187 SHA-256 `f36f15f0658c8554133eccb380e3e08f651db5cbafe40328f6c5da3ccd3f599e`.
+
 ## 2026-11-26 — Exemple à ne pas reproduire · confirmer une consigne puis livrer autre chose
 
 Lors de la retouche des tiroirs WestBlOk, Flying Zulu a demandé de supprimer le titre **et la cellule qui lui réservait de la hauteur**, pour que les potards occupent le haut du panneau ouvert. L’agent a confirmé qu’il avait compris, puis a annoncé plusieurs fois la correction avant de vérifier ce résultat dans l’aperçu livré. Flying Zulu a dû reformuler la même demande. Le titre et sa cellule constituaient un seul élément visuel à retirer.
