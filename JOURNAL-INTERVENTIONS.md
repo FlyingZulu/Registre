@@ -1,5 +1,16 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — EAST 0190 et WEST 0031 · commandes et transports
+
+Le Garage expose les paramètres natifs de chaque panneau dans le Canva, avec deux transports indépendants et lumineux, leurs sélecteurs Libre / Clavier-MIDI, le mix, les deux tempos jusqu’à 300 BPM, les divisions, la synchro, les mutations et les deux Oblitérateurs. La modulation expose le choix d’effet, la vitesse, la profondeur et le mix.
+
+Correction du mix notes sur les deux moteurs. Un générateur arrêté ou sans source de notes disponible ne masque plus l’autre. Le mix répartit les événements quand les deux contribuent. Le guide indique le comportement du déclenchement et du tempo. Le traitement DSP natif et les chemins d’effets conservent leur ordre.
+
+- Source `18a8c45583f42145731765d11d8578d0e2d41c93`. Gradle 8.7 hors ligne `:app:assembleEastDebug :app:assembleWestDebug -PeastReleaseIteration=0190 -PwestReleaseIteration=0031`.
+- Banc audio Java/JNI avec AudioTrack simulé, pour les deux variantes : Turing seul et face à ARP en attente, ARP au clavier, Sync et indépendant, arrêt, et signal avec chacun des cinq effets de modulation. Chromium avec pont simulé : état lumineux, clic des deux transports, sélection du déclenchement et ouverture du choix d’effet.
+- Signatures API 29, intégrité des APK, guides et catalogue contrôlés. Bibliothèques DSP binaires identiques à 0189/0030. Recette d’installation, gestes, MIDI et écoute sur Redmi à faire.
+- SHA-256 EAST 0190 `4921636eeb90a3f438428bbf8c1a274511e59b114b108408305c55fe456ea2e8`. WEST 0031 `40145da869e13d7517245f182a7aa6164e3e08cb0f587f3bb34f11acdc37a0f1`.
+
 ## 2026-11-26 — EAST 0189 et WEST 0030 · frise du circuit
 
 Références audio EAST 0188 et WEST 0029, source `808b4f2fd298be4674dbfe629b46f815b2a9e7ef`. La frise lit le catalogue de la variante et indique séparément le chemin audio, les notes et les sources auxiliaires. EAST filtre dans la voix. WEST place l'insertion du filtre après la modulation et avant le DELAY. Les segments ouvrent leurs panneaux par identifiant, indépendamment de l'ordre des tiroirs.
