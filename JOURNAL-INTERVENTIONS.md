@@ -1,5 +1,16 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — EAST 0188 et WEST 0029 · ports du Garage
+
+Décision de Flying Zulu. **Capsule** est le terme public pour le niveau appelé **Lego** dans les échanges internes.
+
+Les guides embarqués présentent un catalogue avec identifiant permanent, adresse, rattachement capsule/groupe, sens, type, accès et raccords. Le catalogue décrit les points relevés dans le code, avec 27 ports et 10 raccords EAST, 19 ports et 10 raccords WEST. Cette version documente les liaisons actuelles. L'inventaire exhaustif et la revalidation dynamique lors d'un déplacement dans le circuit restent à compléter.
+
+- Source commune : `808b4f2fd298be4674dbfe629b46f815b2a9e7ef`.
+- Compilation avec JDK 17, SDK Android et Gradle 8.7 : `gradle --offline :app:assembleEastDebug :app:assembleWestDebug -PeastReleaseIteration=0188 -PwestReleaseIteration=0029`.
+- Vérifié : `python3 tools/garage_ports.py --check`, intégrité des guides et catalogues embarqués, signature API 29 avec certificat inchangé, ABI arm64, bibliothèques natives arm64 identiques à EAST 0187 et WEST 0028.
+- À faire sur Redmi : ouverture du guide en mode avion et vérification des parcours notes, micro/PCM/Yadaa! et effets jusqu'à la sortie stéréo.
+
 ## 2026-11-26 — WEST 0028 et EAST 0187 · aperçu validé raccordé à l’audio
 
 Les deux variantes embarquent le canevas validé « Filtre sans titre ». Le titre et sa cellule disparaissent à l’ouverture, les potards occupent le haut du panneau, la frise indique le tiroir actif et SNAP est au-dessus du fader Zulu. EAST conserve ses deux oscillateurs et son enveloppe propre. Les commandes détaillées restent accessibles depuis le banc Android natif, via Outils du banc. Les deux guides sont embarqués.
