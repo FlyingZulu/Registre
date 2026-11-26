@@ -1,5 +1,10 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — Livraison directe des APK
+
+**Consigne permanente de Flying Zulu.** Pour chaque APK demandée, joindre dans la réponse un lien de téléchargement direct vers le fichier `.apk` (lien `sandbox:`), avec son nom et sa version, afin qu’elle soit téléchargeable depuis la conversation sur Android. Un lien vers la Bibliothèque ou GitHub peut servir de référence complémentaire.
+
+
 ## 2026-11-26 — WEST · Demande d’APK jouable et reprise du banc
 
 **Demandé.** Intégrer le nouveau banc au moteur WEST réel. Le crossfader Zulu garde un seul point central. Le choix de porteuse FM doit proposer individuellement tous les PCM de la banque de WEST. Préserver les commandes et réglages lors de la rotation, avec la disposition propre à chaque orientation et la possibilité de placer les panneaux côte à côte en paysage.
