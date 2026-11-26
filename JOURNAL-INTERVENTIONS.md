@@ -1,5 +1,15 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — EAST 0195 et WEST 0036 · Looper MIDI du Garage
+
+Outil du Garage à quatre slots dans les deux variantes. Maintien et glissé bas pour armer, tap au relâchement pour démarrer et terminer l’enregistrement, tap d’un slot rempli pour basculer le mute. Coupe au dernier temps complet (5,5 → 5), de 1 temps à 64 pas. Le tempo global conserve la phase des loops et sert d’horloge optionnelle indépendante au Turing et à l’ARP. Inspiration [Roland SP-404MKII BPM SYNC](https://static.roland.com/manuals/sp-404mk2_reference_v4/en-US/7886580378450315.html).
+
+Le menu édite longueur, départ, niveau du slot sur la voix monophonique, Reverse et transposition ±12 demi-tons. Overdub sur la longueur du slot. Enregistrer ou overdubber en Reverse restitue l’ordre joué pendant la lecture Reverse. Maintien et glissé haut vide le slot. Fusion en glissant sur une autre boucle remplie : conserve le slot source, répète la courte jusqu’à la longueur de la plus longue et écrit dans le slot de destination. Les kits historisent les prises et réglages ; STOP AUDIO arrête leur restitution. Six repères du nouvel outil sont documentés dans le catalogue des ports.
+
+- Vérifié sur hôte : limites et coupe, Reverse/overdub, mute et phase, fusion et conservation du slot source, édition non destructive longueur/départ, rendu Java/JNI et niveau par slot, transposition, deux switches de synchro mesurés et STOP. Chromium avec pont simulé sur les ressources extraites des deux APK en portrait et paysage : quatre pads, gestes, déclenchement au relâchement et commandes de l’éditeur.
+- Source `aacd04030ef93e71f135e3059066a29943833ee6`. JDK 17 et Gradle 8.7 : `--offline :app:assembleEastDebug :app:assembleWestDebug -PeastReleaseIteration=0195 -PwestReleaseIteration=0036`. Signatures API 29 vérifiées, bibliothèques DSP et permissions identiques à EAST 0194/WEST 0035. Gestes physiques, écoute et rappel de kit sur Redmi à vérifier.
+- SHA-256 EAST `34060867a964013ddda736a02a1fd92778bb06355c94405f393017cc22b6bb71`, WEST `0c6367165dda1b8200563b0421b10198e3c1ecbe32b72c6f9a5445ec30968e5c`.
+
 ## 2026-11-26 — EAST 0194 et WEST 0035 · Outils du banc
 
 Dans les deux Garages, le hamburger permanent regroupe STOP AUDIO, l’affichage, la copie et le partage du rapport, le diagnostic, le guide et le sous-menu MIDI. MIDI est un outil du banc. USB, Bluetooth, les notes et CC, MIDI Learn et ses affectations restent disponibles à partir des mêmes services Android. Le sous-menu affiche l’état de connexion et permet de terminer l’apprentissage. Le tiroir MIDI et la flèche vers le bas ont été retirés à la demande de Flying Zulu. Les guides embarqués indiquent les nouveaux accès.
