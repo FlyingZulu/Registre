@@ -8,6 +8,12 @@ Ce dépôt conserve le journal des interventions techniques, décisions, vérifi
 
 — Flying Zulu
 
+## Protocole de travail Zulu
+
+- [Méthodes Zulu · débrief et feu vert](https://github.com/FlyingZulu/Atelier-zulu/blob/main/methodes/README.md#2-débrief-pause-et-feu-vert)
+- [Carte du Garage · rôle du banc et circuit du moteur](https://github.com/FlyingZulu/Atelier-zulu/blob/main/projets/carte-circuit-garage.md)
+- [Essais prioritaires à joindre à chaque APK](https://github.com/FlyingZulu/Atelier-zulu/blob/main/methodes/README.md#essais-prioritaires-sur-redmi) · [Grille des gestes et résultats Redmi](https://github.com/FlyingZulu/Atelier-zulu/blob/main/projets/grille-gestes-garage.md)
+
 ## Journal
 
 - [Journal des interventions](JOURNAL-INTERVENTIONS.md)
