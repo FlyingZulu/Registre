@@ -1,5 +1,13 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — WestBlOk 0022 · crash à l’épinglage
+
+Sur 0021, le Redmi a signalé une exception dans `MainActivity` lors de l’épinglage. Le retrait du panneau envoyait un `ACTION_CANCEL` alors que son état était déjà flottant et que son cadre n’existait pas encore. Le gestionnaire suit désormais la vue réellement déplacée et la remet en place sans dépendre du cadre en cours de création.
+
+Commit source `c3c4fe3c6e8cc8de83523af613bd1db62c26059f`, bundle Git joint avec l’APK dans la conversation. Même environnement que 0021. Commande Gradle `--offline --no-daemon :app:assembleWestDebug -PwestReleaseIteration=0022 -PeastReleaseIteration=0186`. SHA-256 APK `35ba4e97525d160bab927f895fa50386acb04588a422d9e515ece137d99cbb92`.
+
+Gradle réussi, signature vérifiée pour API 29 et identique à 0021. Le gestionnaire extrait du code a passé sur ordinateur une simulation d’annulation synchrone pendant l’épinglage et une annulation après détachement de la vue déplacée. Essai tactile sur Redmi encore à faire. Le rendu Android de la 0021 est une adaptation des composants natifs. La comparaison à largeur égale avec le Canva reste ouverte.
+
 ## 2026-11-26 — WestBlOk 0021 · Garage mobile et fader Zulu
 
 **Livraison.** WestBlOk-0021.apk, version `0.1.0-test.21`, code 21, paquet `com.flyingzulu.westzulu`. Fichier joint dans la conversation. SHA-256 `f6fbe8aced5f12a245b4fe7a628a6ae9c35c5c42f5d7805bacb107ae956daad2`. EAST 0186 est la référence du binôme.
