@@ -1,5 +1,13 @@
 # Journal des interventions — ZuluTek Android
 
+## 2026-11-26 — WestBlOk 0023 · rangée Turing/ARP et reprise du signal
+
+Les quatre potentiomètres de Notes · Turing / ARP sont sur une seule rangée, dans l’ordre du canevas. La mise en page complète reste à comparer sur Android avec le Canva v4 à largeur identique.
+
+Sur ordinateur, avec les deux transports en marche et le mix presque côté ARP, le relâchement de la dernière touche en ARP Clavier pouvait laisser le mix sur la voix silencieuse. À une position intermédiaire du mix, le moteur WEST passe maintenant à la source disponible lorsque l’autre attend un déclenchement. STOP conserve le mode de déclenchement choisi. Le scénario Java/JNI avec sortie simulée a échoué sur 0022 et passe sur 0023. Le test audio hôte général passe également. Signature Android 10 identique à 0022. À essayer sur le Redmi en ouvrant Notes, avec Turing Libre, Destination Notes, les deux transports lancés et un mix intermédiaire. Jouer puis relâcher une note et vérifier que le Turing reste audible.
+
+Commit source `26bd91bac4309b06c86a8a147bd6fedcbc1a617c`. Commande Gradle dans le même environnement que 0022 avec `--offline --no-daemon :app:assembleWestDebug -PwestReleaseIteration=0023 -PeastReleaseIteration=0186`. APK et bundle Git joints à la conversation. SHA-256 APK `579e72e8592a05e75df3b62990e070d3ab9175b95621c53ce7cac888092594c4`.
+
 ## 2026-11-26 — WestBlOk 0022 · crash à l’épinglage
 
 Sur 0021, le Redmi a signalé une exception dans `MainActivity` lors de l’épinglage. Le retrait du panneau envoyait un `ACTION_CANCEL` alors que son état était déjà flottant et que son cadre n’existait pas encore. Le gestionnaire suit désormais la vue réellement déplacée et la remet en place sans dépendre du cadre en cours de création.
